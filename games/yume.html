@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YUME</title>
+  <title>autoselff | YUME</title>
   <link href="https://fonts.googleapis.com/css2?family=Doto&display=swap" rel="stylesheet">
   <style>
     html, body {
@@ -149,18 +149,36 @@
       all: unset;
       display: inline-block;
     }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
   </style>
 </head>
 <body>
   <div class="marquee">
-    <div class="marquee-text">Where the only thing optimized is fun — not profits. Heard of folks like that? If not, check out the work of Mike Klubnika, tokyo spliff, ... and the late Terry Davis.</div>
+    <div class="marquee-text">Heard of folks like that? If not, check out the work of Mike Klubnika, Eric Alfaro, tokyo spliff, ... and the late Terry Davis.</div>
   </div>
 
   <div class="container">
     <div class="header">
       <div class="logo">YUME</div>
       <div class="nav">
-        <a href="../index.html">Home</a>
+        <a href="../index.html">HOME</a>
       </div>
     </div>
 
@@ -192,7 +210,7 @@
     <div class="section">
       <p>Published: ??.??.????</p>
       <p>Developer: AUTOSELFF</p>
-      <p>Status: in development</p>
+      <p>Status: In development</p>
       <p>Platforms: Linux, Windows</p>
       <p>Genere: Engine, Tool</p>
       <p>API: OpenGL</p>
@@ -200,9 +218,11 @@
 
     <div class="section">
       <h2>Library</h2>
-        <center>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/e5X22DQibio?si=0ZNkaFSbC2VRO6yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </center>
+      
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/e5X22DQibio?si=0ZNkaFSbC2VRO6yF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
       <div class="game-buttons">
         <img src="../res/yu/ss1.png" alt="YUME Screenshot 1" title="Screenshot 1" />
         <img src="../res/yu/ss2.png" alt="YUME Screenshot 2" title="Screenshot 2" />
@@ -215,9 +235,13 @@
       <a href="https://github.com/autoselff/autoselff/releases/download/v0.9.2/YUME-packages.zip">
         <button class="download-button">Download YUME dependencies</button>
       </a>
-      <p></p>
+
       <a href="https://github.com/autoselff/YUME">
         <button class="download-button">View on GitHub</button>
+      </a>
+
+      <a href="https://github.com/autoselff/yumegl">
+        <button class="download-button">View on GitHub (old)</button>
       </a>
     </div>
 

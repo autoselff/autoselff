@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heart Keeper</title>
+  <title>autoselff | Heart Keeper</title>
   <link href="https://fonts.googleapis.com/css2?family=Doto&display=swap" rel="stylesheet">
   <link href="https://fonts.google.com/specimen/Workbench?categoryFilters=Appearance:%2FTheme%2FPixel" rel="stylesheet">
 
@@ -151,12 +151,30 @@
       all: unset;
       display: inline-block;
     }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
   </style>
 </head>
 
 <body>
   <div class="marquee">
-    <div class="marquee-text">Where the only thing optimized is fun — not profits. Heard of folks like that? If not, check out the work of Mike Klubnika, tokyo spliff, ... and the late Terry Davis.</div>
+    <div class="marquee-text">Heard of folks like that? If not, check out the work of Mike Klubnika, Eric Alfaro, tokyo spliff, ... and the late Terry Davis.</div>
   </div>
 
   <div class="container">
@@ -164,7 +182,7 @@
       <div class="logo">Heart Keeper</div>
 
       <div class="nav">
-        <a href="../index.html">Home</a>
+        <a href="../index.html">HOME</a>
       </div>
 
     </div>
@@ -211,9 +229,9 @@
 
     <div class="section">
       <h2>Library</h2>
-        <center>
+        <div class="iframe-container">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/W3yPWNcFghM?si=amwu3HxWMmdUmbYv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </center>
+        </div>
         <div class="game-buttons">
         <img src="../res/hk/ss1.png" alt="ss1" title="ss1" />
         <img src="../res/hk/ss2.png" alt="ss2" title="ss2" />
