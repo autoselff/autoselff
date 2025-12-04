@@ -22,7 +22,7 @@ function loadCommon() {
       padding: 0;
       height: 100%;
       font-family: 'Doto', monospace;
-      background-image: url('../res/bg.gif');
+      background-image: url('res/bg.gif');
       background-size: cover;
       background-repeat: repeat;
       background-position: center;
