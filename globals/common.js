@@ -4,7 +4,7 @@ function loadCommon() {
   const metaCharset = document.createElement('meta');
   metaCharset.setAttribute('charset', 'UTF-8');
   head.appendChild(metaCharset);
-  
+
   const metaViewport = document.createElement('meta');
   metaViewport.setAttribute('name', 'viewport');
   metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
@@ -14,7 +14,13 @@ function loadCommon() {
   fontLink.href = 'https://fonts.googleapis.com/css2?family=Doto&display=swap';
   fontLink.rel = 'stylesheet';
   head.appendChild(fontLink);
-  
+
+  const favicon = document.createElement('link');
+  favicon.rel = 'icon';
+  favicon.type = 'image/png';
+  favicon.href = 'res/icon.png';
+  head.appendChild(favicon);
+
   const style = document.createElement('style');
   style.textContent = `
     html, body {
