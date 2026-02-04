@@ -5,10 +5,10 @@
 // The files without this comment were created by me.
 
 (function () {
-    const postsContainer = document.getElementById('posts-container');
+    const latestPostContainer = document.getElementById('latest-post-container');
 
-    if (!postsContainer) {
-        console.error('Posts container not found!');
+    if (!latestPostContainer) {
+        console.error('Latest post container not found!');
         return;
     }
 
@@ -20,7 +20,7 @@
 
     function createPostElement(post) {
         const postDiv = document.createElement('div');
-        postDiv.className = 'post';
+        postDiv.className = 'post latest-post';
 
         const dateDiv = document.createElement('div');
         dateDiv.className = 'post-date';
@@ -68,27 +68,26 @@
         return postDiv;
     }
 
-    function renderPosts() {
-        postsContainer.innerHTML = '';
+    function displayLatestPost() {
+        latestPostContainer.innerHTML = '';
 
         if (!POSTS || POSTS.length === 0) {
             const emptyMessage = document.createElement('p');
-            emptyMessage.textContent = 'No posts yet. Check back later!';
+            emptyMessage.textContent = 'No posts yet.';
             emptyMessage.style.textAlign = 'center';
             emptyMessage.style.opacity = '0.6';
-            postsContainer.appendChild(emptyMessage);
+            latestPostContainer.appendChild(emptyMessage);
             return;
         }
 
-        POSTS.forEach(post => {
-            const postElement = createPostElement(post);
-            postsContainer.appendChild(postElement);
-        });
+        const latestPost = POSTS[0];
+        const postElement = createPostElement(latestPost);
+        latestPostContainer.appendChild(postElement);
     }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', renderPosts);
+        document.addEventListener('DOMContentLoaded', displayLatestPost);
     } else {
-        renderPosts();
+        displayLatestPost();
     }
 })();

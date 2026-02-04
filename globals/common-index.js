@@ -1,3 +1,9 @@
+// This .js file was created using Claude AI. 
+// Why? I don't like or know javascript, 
+// and I don't plan to learn it anytime soon because 
+// I'm not a big fan of web development.
+// The files without this comment were created by me.
+
 function loadCommonIndex() {
   const head = document.head;
 
@@ -252,6 +258,134 @@ function loadCommonIndex() {
     .skill-tag:hover {
       background-color: white;
       color: black;
+    }
+
+    .post {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .post:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .post-date {
+      font-size: 0.85em;
+      opacity: 0.6;
+      margin-bottom: 10px;
+      font-family: monospace;
+    }
+
+    .post-content {
+      line-height: 1.6;
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+
+    .post-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .post-link-container {
+      margin-top: 15px;
+    }
+
+    .post-link {
+      display: inline-block;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.3s ease, border-color 0.3s ease;
+      font-size: 0.9em;
+    }
+
+    .post-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .post-tag {
+      font-size: 0.8em;
+      padding: 4px 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      opacity: 0.7;
+      font-family: monospace;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .post {
+        padding: 15px;
+      }
+
+      .post-content {
+        font-size: 0.95em;
+      }
+    }
+
+    /* Alternative: Minimal style (uncomment if you prefer this) */
+    /*
+    .post {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px 0;
+      margin-bottom: 0;
+    }
+
+    .post:last-child {
+      border-bottom: none;
+    }
+    */
+
+    /* Latest post on homepage */
+    .latest-post {
+      margin-bottom: 0;
+    }
+
+    /* Posts button */
+    .posts-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .posts-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .posts-button:active {
+      transform: translateY(0);
     }
   `;
   head.appendChild(style);
