@@ -216,6 +216,9 @@ function loadCommon() {
       line-height: 1.6;
       margin-bottom: 10px;
       white-space: pre-wrap;
+      font-family: 'Doto', monospace;
+      font-weight: 700;
+      line-height: 1.4;
     }
 
     .post-image {
