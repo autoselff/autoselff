@@ -192,12 +192,13 @@ function loadCommon() {
     }
       
     .post {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
       border-radius: 4px;
       padding: 20px;
       margin-bottom: 20px;
-      transition: background 0.3s ease, border-color 0.3s ease;
     }
 
     .post:hover {

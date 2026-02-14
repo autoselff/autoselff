@@ -1,8 +1,10 @@
 const POSTS = [
     {
-        date: "02-04-2026",
-        content: "Today I have decided to stop using social media other than youtube for now and hopefully forever. From today announcements will appear on my discord server and here ONLY.",
-        tags: ["announcement"]
+        date: "02-14-2026",
+        content: "HyperDissonance Act 1 is now also available on itch.io! If you haven't played it yet, feel free to give it a try. The full version is still available exclusively on Steam.",
+        link: "https://autoselff.itch.io/hyperdissonance",
+        linkText: "Itch.io Page",
+        tags: ["announcement", "gamedev"]
     },
     {
         date: "01-24-2026",
