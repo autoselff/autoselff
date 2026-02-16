@@ -13,7 +13,8 @@ function loadFooter() {
         <a href="https://store.steampowered.com/dev/autoselff">STEAM</a> <a> | </a>
         <a href="https://www.youtube.com/@autoselff">YOUTUBE</a> <a> | </a>
         <a href="https://x.com/autoselff">TWITTER</a> <a> | </a>
-        <a href="https://github.com/autoselff">GITHUB</a> 
+        <a href="https://github.com/autoselff">GITHUB</a> <a> | </a>
+        <a href="https://autoselff.itch.io/"> ITCH.IO</a>
     `;
 
     const container = document.querySelector('.container');
