@@ -13,7 +13,7 @@ function loadWebButtons() {
       <a href="https://cachyos.org/">
         <img src="res/web-buttons/visitmini.gif" alt=""> 
       </a>
-      <a href="https://myanimelist.net/profile/autoself">
+      <a href="https://myanimelist.net/profile/autoselff">
         <img src="res/web-buttons/blink.gif" alt=""> 
       </a>
       <a href="https://godotengine.org/">
