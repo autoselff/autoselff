@@ -1,33 +1,33 @@
-// This .js file was created using Claude AI. 
-// Why? I don't like or know javascript, 
-// and I don't plan to learn it anytime soon because 
+// This .js file was created using Claude AI.
+// Why? I don't like or know javascript,
+// and I don't plan to learn it anytime soon because
 // I'm not a big fan of web development.
 // The files without this comment were created by me.
 
 function loadCommonIndex() {
   const head = document.head;
 
-  const metaCharset = document.createElement('meta');
-  metaCharset.setAttribute('charset', 'UTF-8');
+  const metaCharset = document.createElement("meta");
+  metaCharset.setAttribute("charset", "UTF-8");
   head.appendChild(metaCharset);
 
-  const metaViewport = document.createElement('meta');
-  metaViewport.setAttribute('name', 'viewport');
-  metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+  const metaViewport = document.createElement("meta");
+  metaViewport.setAttribute("name", "viewport");
+  metaViewport.setAttribute("content", "width=device-width, initial-scale=1.0");
   head.appendChild(metaViewport);
 
-  const fontLink = document.createElement('link');
-  fontLink.href = 'https://fonts.googleapis.com/css2?family=Doto&display=swap';
-  fontLink.rel = 'stylesheet';
+  const fontLink = document.createElement("link");
+  fontLink.href = "https://fonts.googleapis.com/css2?family=Doto&display=swap";
+  fontLink.rel = "stylesheet";
   head.appendChild(fontLink);
 
-  const favicon = document.createElement('link');
-  favicon.rel = 'icon';
-  favicon.type = 'image/png';
-  favicon.href = 'res/icon.png';
+  const favicon = document.createElement("link");
+  favicon.rel = "icon";
+  favicon.type = "image/png";
+  favicon.href = "res/icon.png";
   head.appendChild(favicon);
 
-  const style = document.createElement('style');
+  const style = document.createElement("style");
   style.textContent = `
     html,
     body {
