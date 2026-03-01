@@ -71,6 +71,13 @@ function loadCommonIndex() {
       line-height: 1.4;
     }
 
+    .fp-text {
+      font-family: arial;
+      font-weight: 700;
+      line-height: 1.4;
+      color: white;
+    }
+
     a {
       color: white;
       text-decoration: none;
