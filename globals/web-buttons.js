@@ -1,4 +1,4 @@
-// This .js file was created using Claude AI. 
+// This .js code was created using Claude AI.
 // Why? I don't like or know javascript, 
 // and I don't plan to learn it anytime soon because 
 // I'm not a big fan of web development.
