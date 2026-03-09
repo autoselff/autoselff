@@ -1,4 +1,4 @@
-// This .js file was created using Claude AI.
+// This .js code was created using Claude AI.
 // Why? I don't like or know javascript,
 // and I don't plan to learn it anytime soon because
 // I'm not a big fan of web development.
@@ -8,6 +8,7 @@ function loadFooter() {
   const footer = document.createElement("div");
   footer.className = "footer";
 
+  // The footer was created by me
   footer.innerHTML = `
       <a href="https://www.youtube.com/@autoselff">YOUTUBE</a> <a> | </a>
       <a href="https://discord.gg/nhW6HwreD4">DISCORD</a> <a> | </a>
