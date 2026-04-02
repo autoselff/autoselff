@@ -1,5 +1,12 @@
 const POSTS = [
     {
+        date: "04-02-2026",
+        content: "I know I said I didn't know when the next video would be, but I had a slower week, and HERE IT IS. I'm presenting a video about what I've been working on for the last two months!",
+        link: "https://www.youtube.com/watch?v=AbDJ39ZUoFQ",
+        linkText: "Watch on YouTube",
+        tags: ["announcement", "new_video", "gamedev"]
+    },
+    {
         date: "02-26-2026",
         content: "I just uploaded a new video. In it, I briefly talk about my programming journey over the last three years. The video includes about 50% of what I consider to be my most interesting projects. Have a nice evening.",
         link: "https://youtu.be/aQCkT5HYHXA",
