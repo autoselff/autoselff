@@ -1,9 +1,3 @@
-// This .js code was created using Claude AI.
-// Why? I don't like or know javascript, 
-// and I don't plan to learn it anytime soon because 
-// I'm not a big fan of web development.
-// The files without this comment were created by me.
-
 function loadCommon() {
   const head = document.head;
 
@@ -27,8 +21,6 @@ function loadCommon() {
   favicon.href = 'res/icon.png';
   head.appendChild(favicon);
 
-  // The style was created by me
-  // start
   const style = document.createElement('style');
   style.textContent = `
     html, body {
@@ -192,7 +184,7 @@ function loadCommon() {
       height: 100%;
       border: 0;
     }
-      
+
     .post {
       border: 1px solid white;
       padding: 20px;
@@ -325,7 +317,6 @@ function loadCommon() {
       transform: translateY(0);
     }
   `;
-  // end
   head.appendChild(style);
 }
 
