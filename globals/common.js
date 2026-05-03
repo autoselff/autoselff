@@ -125,6 +125,43 @@ function loadCommon() {
       line-height: 1.4;
     }
 
+    /* GIF container - zachowuje proporcje, nie wychodzi poza obszar */
+    .gif-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px 0;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .gif-container img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: block;
+    }
+
+    /* Modyfikatory układu - opcjonalne klasy */
+    .gif-container.single img {
+      max-width: 100%;
+      max-height: 500px;
+    }
+
+    .gif-container.two-col img {
+      max-width: calc(50% - 5px);
+    }
+
+    .gif-container.three-col img {
+      max-width: calc(33.333% - 7px);
+    }
+
     .game-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -270,6 +307,11 @@ function loadCommon() {
 
       .post-content {
         font-size: 0.95em;
+      }
+
+      .gif-container.two-col img,
+      .gif-container.three-col img {
+        max-width: 100%;
       }
     }
 

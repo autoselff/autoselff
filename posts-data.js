@@ -1,10 +1,17 @@
 const POSTS = [
     {
+        date: "05-03-2026",
+        content: "After one month since I launched my game's Steam page, I managed to reach 100 wishlists. It may not be a perfect number, but despite that, I'm proud. Thanks everyone for the support and see you!",
+        link: "https://store.steampowered.com/app/4532890/ANTA3/",
+        linkText: "Wishlist ANTA3 on Steam",
+        tags: ["announcement", "anta3", "gamedev"]
+    },
+    {
         date: "04-02-2026",
         content: "I know I said I didn't know when the next video would be, but I had a slower week, and HERE IT IS. I'm presenting a video about what I've been working on for the last two months!",
         link: "https://www.youtube.com/watch?v=AbDJ39ZUoFQ",
         linkText: "Watch on YouTube",
-        tags: ["announcement", "new_video", "gamedev"]
+        tags: ["announcement", "new_video", "gamedev", "anta3"]
     },
     {
         date: "02-26-2026",
