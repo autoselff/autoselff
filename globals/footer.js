@@ -4,7 +4,7 @@ function loadFooter() {
 
   footer.innerHTML = `
       <a href="https://www.youtube.com/@autoselff">YOUTUBE</a> <a> | </a>
-      <a href="https://discord.gg/nhW6HwreD4">DISCORD</a> <a> | </a>
+      <a href="https://discord.gg/gE3J3dfpH6">DISCORD</a> <a> | </a>
       <a href="https://github.com/autoselff">GITHUB</a> <a> | </a>
       <a href="https://store.steampowered.com/dev/autoself">STEAM</a> <a> | </a>
       <a href="https://x.com/autoselff">TWITTER</a>
