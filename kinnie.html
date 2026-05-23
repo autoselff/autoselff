@@ -5,6 +5,135 @@
   <title>autoselff | kinnie</title>
   <script src="globals/common.js"></script>
   <script src="globals/marquee.js"></script>
+  <style>
+    h2, h3 {
+      color: white;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    code {
+      background-color: rgba(0,0,0,0.5);
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #88bbff;
+      font-family: 'Courier New', monospace;
+    }
+
+    pre {
+      background-color: rgba(0,0,0,0.7);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 15px;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 10px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      line-height: 1.5;
+      color: #88bbff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      background-color: rgba(255,255,255,0.05);
+    }
+
+    th, td {
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgba(255,255,255,0.1);
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: rgba(255,255,255,0.08);
+    }
+
+    ul, ol {
+      margin: 10px 0;
+      padding-left: 30px;
+      font-family: 'Doto', monospace;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .code-label {
+      color: #88bbff;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+
+    .status-banner {
+      background-color: rgba(100, 150, 255, 0.15);
+      border: 2px solid rgba(100, 150, 255, 0.5);
+      border-radius: 4px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .status-banner h3 {
+      margin-top: 0;
+      color: #88bbff;
+    }
+
+    .status-banner p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .github-contrib-button {
+      display: inline-block;
+      background-color: #88bbff;
+      color: black;
+      font-family: 'Doto', monospace;
+      font-weight: bold;
+      border: none;
+      padding: 12px 30px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      margin-top: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .github-contrib-button:hover {
+      transform: scale(1.05);
+      background-color: #aaccff;
+    }
+
+    .important {
+      background-color: rgba(100,150,255,0.1);
+      border-left: 3px solid rgba(100,150,255,0.5);
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+
+    .doc-section {
+      scroll-margin-top: 60px;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,60 +148,485 @@
     <script src="globals/web-buttons.js"></script>
 
     <div class="section">
-
       <h2>About</h2>
-      <p>kinnie - a minimalist interpreted programming language written in C.</p>
-      <p>
-        The interpreter is available for download below. However, if you want to compile it yourself, feel
-        free to
-        do so. Once you have the interpreter, to run the example.kn file, simply type the command ./kinnie example.kn
-        or, if you
-        are using Windows, ./kinnie.exe example.kn.
-
-        kinnie has an extension for Visual Studio Code that allows keyword highlighting and suggestions. You can
-        download it
-        from the kinnie-vsc github repository or also below.
-      </p>
-
+      <p>A simple and minimalist programming language dedicated to developing small simulations and games (compiles to C++) </p>
     </div>
 
     <div class="section">
-      <p>Release Date: 19.12.2025</p>
-      <p>Developer: AUTOSELFF</p>
-      <p>Status: Released</p>
-      <p>Platforms: Linux, Windows</p>
-      <p>Genere: Programming language, Tool</p>
-      <p>Made in C</p>
+      <div class="status-banner">
+        <h3>Work in Progress</h3>
+        <p>kinnie is still in active development and contains numerous bugs. The language is not finished yet, and breaking changes may occur.</p>
+        <p>I invite contributions! If you encounter issues or have ideas for improvements, please visit the repository:</p>
+        <a href="https://github.com/autoselff/kinnie" class="github-contrib-button">Contribute on GitHub</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <p><strong>Release Date:</strong> NULL</p>
+      <p><strong>Developer:</strong> AUTOSELFF</p>
+      <p><strong>Status:</strong> In Development</p>
+      <p><strong>Platforms:</strong> Linux</p>
+      <p><strong>Genre:</strong> Programming language, Tool</p>
+      <p><strong>Made in:</strong> C/C++</p>
     </div>
 
     <div class="section">
       <h2>Library</h2>
-
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/rhPQ-ZbFTxk?si=bt59z1bwEnw-D1WE" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/MYbSW3f48Uw?si=PZOBOOUxcmLKlFCh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
 
-    <div class="section" style="text-align: center;">
-      <a href="https://github.com/autoselff/kinnie/releases/download/v1.1.0/kinnie">
-        <button class="download-button">kinnie interpreter (linux)</button>
-      </a>
+    <!-- DOCUMENTATION START -->
+    <div class="section doc-section">
+      <h2>Setup</h2>
+      <div class="important">
+        <p><strong>Important!</strong> To use the built-in graphics library, you must have SDL2 and SDL_ttf libraries installed. Also, make sure you have gcc and g++ compilers installed. Kinnie does not support the underscore character in variable, function and struct names.</p>
+      </div>
 
-      <a href="https://github.com/autoselff/kinnie/releases/download/v1.1.0/kinnie.exe">
-        <button class="download-button">kinnie interpreter (windows)</button>
-      </a>
+      <h3>Debian</h3>
+      <pre>sudo apt install cmake libsdl2-dev libsdl2-ttf-dev gcc g++</pre>
 
-      <a href="https://github.com/autoselff/kinnie-vsc">
-        <button class="download-button">Extension for Visual Studio Code</button>
-      </a>
+      <h3>Arch</h3>
+      <pre>sudo pacman -S cmake sdl2 sdl2_ttf gcc</pre>
 
-      <a href="https://github.com/autoselff/kinnie">
-        <button class="download-button">View on GitHub</button>
-      </a>
+      <h3>Clone Repository</h3>
+      <pre>gh repo clone autoselff/kinnie
+cd kinnie</pre>
+
+      <h3>Compile kinnie (CMake — recommended)</h3>
+      <pre>cmake -B build
+cmake --build build</pre>
+
+      <h3>Add to PATH</h3>
+      <pre>sudo cmake --install build</pre>
     </div>
+
+    <div class="section doc-section">
+      <h2>Running</h2>
+      <pre>kinnie main.kn</pre>
+
+      <h3>Command-line Flags</h3>
+      <ul>
+        <li><span class="code-label">--version</span> — Display version information</li>
+        <li><span class="code-label">--compile</span> — Compile only, do not run the generated executable</li>
+        <li><span class="code-label">--remcpp</span> — Remove the generated C++ file after compilation</li>
+        <li><span class="code-label">--stime</span> — Show compilation time statistics for each stage</li>
+      </ul>
+    </div>
+
+    <div class="section doc-section">
+      <h2>Language Syntax</h2>
+
+      <h3>Variables</h3>
+      <p>Defining variables:</p>
+      <pre>var x = 10
+var name = "Hello"
+var pi = 3.14</pre>
+
+      <h3>Arrays</h3>
+      <p>Arrays store multiple values in a single variable. Arrays can contain numbers, strings, and other arrays.</p>
+      <p><strong>Creating arrays:</strong></p>
+      <pre>var numbers = [10, 20, 30, 40]
+var mixed = [100, 200, "text", 400]
+var empty = []</pre>
+
+      <p><strong>Accessing array elements (0-indexed):</strong></p>
+      <pre>var first = numbers[0]   // 10
+var second = numbers[1]  // 20
+var text = mixed[2]      // "text"</pre>
+
+      <p><strong>Modifying array elements:</strong></p>
+      <pre>numbers[0] = 15
+mixed[2] = "new text"</pre>
+
+      <p><strong>Printing arrays:</strong></p>
+      <pre>var tab = [1, 2, "Hello", [3, 4]]
+out "{tab}\n"       // [1, 2, "Hello", [3, 4]]
+out "{tab[3]}\n"    // [3, 4]</pre>
+
+      <h4>Array Methods</h4>
+      <p><strong>.add(value)</strong> — Appends a value to the end of an array.</p>
+      <pre>var tab = [1, 2, 3]
+tab.add(4)         // [1, 2, 3, 4]
+tab.add("hello")   // [1, 2, 3, 4, "hello"]
+tab.add([5, 6])    // [1, 2, 3, 4, "hello", [5, 6]]</pre>
+
+      <p><strong>.remove(index)</strong> — Removes the element at the given index.</p>
+      <pre>var tab = [1, 2, 3, 4]
+tab.remove(0)              // [2, 3, 4]
+tab.remove(len(tab) - 1)  // removes last element</pre>
+
+      <p><strong>Both methods work on nested arrays:</strong></p>
+      <pre>var tab = [1, 2, [3, 4]]
+tab[2].remove(0)   // tab is now [1, 2, [4]]
+tab[2].add(99)     // tab is now [1, 2, [4, 99]]</pre>
+
+      <h4>Multi-dimensional Arrays</h4>
+      <p>Arrays can be nested arbitrarily to create multi-dimensional structures.</p>
+      <p><strong>Creating nested arrays:</strong></p>
+      <pre>// 1D array
+var numbers = [10, 20, 30]
+
+// 2D array (matrix)
+var matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+// 3D array
+var cube = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]</pre>
+
+      <p><strong>Accessing elements:</strong></p>
+      <pre>var val1 = matrix[0][1]      // 2
+var val2 = cube[0][1][0]     // 3
+matrix[1][2] = 99
+cube[0][0][1] = 42</pre>
+
+      <p><strong>Iterating through multi-dimensional arrays:</strong></p>
+      <pre>fun display2D(t) {
+    var i = 0
+    var rows = len(t)
+    rep rows {
+        var j = 0
+        var cols = len(t[i])
+        rep cols {
+            out "{t[i][j]} "
+            j = j + 1
+        }
+        out "\n"
+        i = i + 1
+    }
+}</pre>
+    </div>
+
+    <div class="section doc-section">
+      <h2>Arithmetic & Math</h2>
+
+      <h3>Operators</h3>
+      <ul>
+        <li><span class="code-label">+</span> addition</li>
+        <li><span class="code-label">-</span> subtraction</li>
+        <li><span class="code-label">*</span> multiplication</li>
+        <li><span class="code-label">/</span> division</li>
+      </ul>
+
+      <pre>var sum = 5 + 3
+var diff = 10 - 2
+var prod = 4 * 5
+var div = 20 / 4</pre>
+
+      <h3>Math Functions</h3>
+      <table>
+        <tr>
+          <th>Function</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>sin(x)</code></td>
+          <td>sine of x (radians)</td>
+        </tr>
+        <tr>
+          <td><code>cos(x)</code></td>
+          <td>cosine of x (radians)</td>
+        </tr>
+        <tr>
+          <td><code>abs(x)</code></td>
+          <td>absolute value</td>
+        </tr>
+        <tr>
+          <td><code>sqrt(x)</code></td>
+          <td>square root of x</td>
+        </tr>
+        <tr>
+          <td><code>exp(x)</code></td>
+          <td>e raised to the power x</td>
+        </tr>
+        <tr>
+          <td><code>log(x)</code></td>
+          <td>natural logarithm of x</td>
+        </tr>
+        <tr>
+          <td><code>log10(x)</code></td>
+          <td>base-10 logarithm of x</td>
+        </tr>
+        <tr>
+          <td><code>pow(a, b)</code></td>
+          <td>a raised to the power b</td>
+        </tr>
+        <tr>
+          <td><code>min(a, b)</code></td>
+          <td>smaller of two values</td>
+        </tr>
+        <tr>
+          <td><code>max(a, b)</code></td>
+          <td>larger of two values</td>
+        </tr>
+        <tr>
+          <td><code>clamp(x, min, max)</code></td>
+          <td>clamp value between min and max</td>
+        </tr>
+        <tr>
+          <td><code>round(x)</code></td>
+          <td>round to nearest integer</td>
+        </tr>
+        <tr>
+          <td><code>floor(x)</code></td>
+          <td>round down to nearest integer</td>
+        </tr>
+        <tr>
+          <td><code>ceil(x)</code></td>
+          <td>round up to nearest integer</td>
+        </tr>
+        <tr>
+          <td><code>mod(a, b)</code></td>
+          <td>floating-point modulo</td>
+        </tr>
+        <tr>
+          <td><code>lerp(a, b, t)</code></td>
+          <td>linear interpolation: a + (b-a) * t</td>
+        </tr>
+        <tr>
+          <td><code>distance(x1, y1, x2, y2)</code></td>
+          <td>Euclidean distance between two points</td>
+        </tr>
+      </table>
+
+      <h3>Other Functions</h3>
+      <table>
+        <tr>
+          <th>Function</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>random(min, max)</code></td>
+          <td>returns a random number between min and max</td>
+        </tr>
+        <tr>
+          <td><code>sizeof(x)</code></td>
+          <td>size in bytes of a value</td>
+        </tr>
+        <tr>
+          <td><code>delay(seconds)</code></td>
+          <td>pause execution for specified seconds</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section doc-section">
+      <h2>Control Flow</h2>
+
+      <h3>Comparison Operators</h3>
+      <ul>
+        <li><span class="code-label">==</span> equal</li>
+        <li><span class="code-label">!=</span> not equal</li>
+        <li><span class="code-label">></span> greater than</li>
+        <li><span class="code-label"><</span> less than</li>
+        <li><span class="code-label">>=</span> greater or equal</li>
+        <li><span class="code-label"><=</span> less or equal</li>
+      </ul>
+
+      <pre>if x == 5 {
+    out "x is 5"
+}
+
+if y > 10 {
+    out "y is greater than 10"
+}</pre>
+
+      <h3>Conditional Statements</h3>
+      <pre>if condition {
+    out "Condition is true"
+}
+else {
+    out "Condition is false"
+}</pre>
+
+      <h3>Loops</h3>
+      <pre>var i = 5
+rep i {
+    out "{i},"
+    if i == 3 {
+        stop
+    }
+}</pre>
+      <p>The <span class="code-label">rep</span> loop iterates N times. The counter variable must be defined beforehand.</p>
+    </div>
+
+    <div class="section doc-section">
+      <h2>Functions</h2>
+
+      <h3>Defining Functions</h3>
+      <pre>fun greet(name) {
+    out "Hello, {name}!"
+}</pre>
+
+      <h3>Calling Functions</h3>
+      <pre>greet("World")
+
+var name = "Joe"
+greet(name)</pre>
+
+      <h3>Returning Values</h3>
+      <pre>fun add(a, b) {
+    ret a + b
+}
+
+fun main() {
+    var x = 10
+    var result = add(x, 3)
+}</pre>
+
+      <p><strong>Note:</strong> Arrays passed to functions are always passed by reference. Modifications inside the function affect the original array.</p>
+      <pre>fun foo(t) {
+    var l = len(t) - 1
+    rep l {
+        var temp = l + 1
+        t[l] = t[l] + t[temp]
+    }
+}</pre>
+    </div>
+
+    <div class="section doc-section">
+      <h2>Structs</h2>
+
+      <h3>Defining a Struct</h3>
+      <pre>str Player {
+    var x = 0
+    var y = 0
+    var hp = 100
+
+    fun move(dx, dy) {
+        x = x + dx
+        y = y + dy
+    }
+
+    fun print() {
+        out "pos: {x}, {y} hp: {hp}\n"
+    }
+}</pre>
+
+      <h3>Creating an Instance</h3>
+      <pre>Player p        // str keyword is optional</pre>
+
+      <h3>Accessing and Modifying Fields</h3>
+      <pre>p.x = 400
+p.y = 300
+var health = p.hp</pre>
+
+      <h3>Calling Methods</h3>
+      <pre>p.move(10, 5)
+p.print()</pre>
+
+      <h3>Passing Structs to Functions</h3>
+      <p>Struct instances are passed by reference — modifications affect the original:</p>
+      <pre>fun damage(p, amount) {
+    p.hp = p.hp - amount
+}
+
+fun main() {
+    Player p
+    p.hp = 100
+    damage(p, 25)
+    out "{p.hp}\n"   // 75
+}</pre>
+
+      <p><strong>Limits:</strong> maximum 32 structs, 32 fields per struct, 16 methods per struct.</p>
+    </div>
+
+    <div class="section doc-section">
+      <h2>Output</h2>
+      <pre>out 42           // Prints: 42
+out "Hello"      // Prints: Hello
+out "x = {x}"    // Print with variable substitution</pre>
+      <p>Variable interpolation in strings uses <span class="code-label">{variable_name}</span> syntax.</p>
+    </div>
+
+    <div class="section doc-section">
+      <h2>Including Files</h2>
+      <pre>add "lib.kn"</pre>
+    </div>
+
+    <div class="section doc-section">
+      <h2>SDL2 Graphics</h2>
+
+      <h3>Window Initialization</h3>
+      <pre>createWindow(800, 600, "Kinnie")</pre>
+      <p>Parameters: <span class="code-label">(width, height, title)</span></p>
+
+      <h3>Clear Screen</h3>
+      <pre>clearScreen(0, 0, 0)  // RGB values (0-255)</pre>
+
+      <h3>Drawing Functions</h3>
+      <ul>
+        <li><span class="code-label">drawPixel(x, y, r, g, b)</span> — Draws a single pixel</li>
+        <li><span class="code-label">drawSquare(x, y, size, r, g, b)</span> — Draws a filled square</li>
+        <li><span class="code-label">drawCircle(x, y, radius, r, g, b)</span> — Draws a filled circle</li>
+      </ul>
+
+      <p><strong>Examples:</strong></p>
+      <pre>drawSquare(100, 100, 50, 255, 0, 0)  // red square at (100,100), size 50
+drawCircle(200, 150, 40, 0, 255, 0)  // green circle at (200,150), radius 40</pre>
+
+      <h3>Text Rendering</h3>
+      <pre>setFont("path/to/font.ttf")
+drawText(50, 50, "Hello World", 24, 255, 255, 255)  // white text</pre>
+
+      <h3>Keyboard Input</h3>
+      <ul>
+        <li><span class="code-label">keyPressed(key)</span> — Checks if a key was just pressed (returns 0 or 1)</li>
+        <li><span class="code-label">keyDown(key)</span> — Checks if a key is currently held down (returns 0 or 1)</li>
+      </ul>
+
+      <p><strong>Supported keys:</strong> <span class="code-label">"left"</span>, <span class="code-label">"right"</span>, <span class="code-label">"up"</span>, <span class="code-label">"down"</span>, <span class="code-label">"space"</span>, <span class="code-label">"a"</span>, <span class="code-label">"b"</span>, etc.</p>
+
+      <pre>if keyPressed("space") {
+    out "Space pressed!"
+}
+
+if keyDown("left") {
+    out "Left arrow held"
+}</pre>
+
+      <h3>Frame Timing</h3>
+      <p><span class="code-label">deltaTime</span> is a global variable that holds the time in seconds elapsed since the last frame. Use it for frame-rate independent movement:</p>
+      <pre>var speed = 200
+playerX = playerX + speed * deltaTime</pre>
+    </div>
+
+    <div class="section doc-section">
+      <h2>Common Issues</h2>
+      <ul>
+        <li><strong>"SDL2 not found"</strong> — Install SDL2:
+          <ul>
+            <li>Debian: <span class="code-label">sudo apt install libsdl2-dev</span></li>
+            <li>Arch: <span class="code-label">sudo pacman -S sdl2</span></li>
+          </ul>
+        </li>
+        <li><strong>drawText() doesn't render text</strong> — Install SDL2_ttf library:
+          <ul>
+            <li>Debian: <span class="code-label">sudo apt install libsdl2-ttf-dev</span></li>
+            <li>Arch: <span class="code-label">sudo pacman -S sdl2_ttf</span></li>
+          </ul>
+        </li>
+        <li><strong>Function doesn't return value</strong> — Use <span class="code-label">ret value</span> instead of <span class="code-label">return</span></li>
+        <li><strong>Objects not drawing properly</strong> — Ensure function parameters are not modified by <span class="code-label">rep</span> loops. Use temporary variables.</li>
+      </ul>
+    </div>
+
+    <div class="section doc-section">
+      <h2>Limitations</h2>
+      <ul>
+        <li>Maximum 8192 tokens per file (after includes)</li>
+        <li>Maximum 64 functions</li>
+        <li>Maximum 16 parameters per function</li>
+        <li>Maximum 32 characters in a name</li>
+        <li>Maximum 128 characters in a string literal</li>
+        <li>All numeric values are floating point (<span class="code-label">double</span>)</li>
+        <li>Maximum 32 structs, 32 fields per struct, 16 methods per struct</li>
+        <li>Structs cannot be returned from functions or initialized with <span class="code-label">= expr</span></li>
+        <li>Arrays can be nested arbitrarily (unlimited dimensions)</li>
+        <li>Array methods: <span class="code-label">.add(value)</span> appends, <span class="code-label">.remove(index)</span> removes by index</li>
+      </ul>
+    </div>
+    <!-- DOCUMENTATION END -->
 
     <script src="globals/footer.js"></script>
   </div>
