@@ -313,6 +313,25 @@ var diff = 10 - 2
 var prod = 4 * 5
 var div = 20 / 4</pre>
 
+      <h3>Compound Assignment Operators</h3>
+      <ul>
+        <li><span class="code-label">+=</span> add and assign</li>
+        <li><span class="code-label">-=</span> subtract and assign</li>
+        <li><span class="code-label">*=</span> multiply and assign</li>
+        <li><span class="code-label">/=</span> divide and assign</li>
+      </ul>
+
+      <pre>var x = 100
+x += 50    // x = 150
+x -= 30    // x = 120
+x *= 2     // x = 240
+x /= 4     // x = 60</pre>
+
+      <h3>Increment / Decrement</h3>
+      <pre>var i = 0
+i++    // i = 1
+i--    // i = 0</pre>
+
       <h3>Math Functions</h3>
       <table>
         <tr>
@@ -431,23 +450,58 @@ if y > 10 {
     out "y is greater than 10"
 }</pre>
 
-      <h3>Conditional Statements</h3>
-      <pre>if condition {
-    out "Condition is true"
+      <h3>Logical Operators</h3>
+      <ul>
+        <li><span class="code-label">and</span> — logical AND</li>
+        <li><span class="code-label">or</span> — logical OR</li>
+        <li><span class="code-label">not</span> — logical NOT</li>
+      </ul>
+      <pre>if a > 0 and b > 0 {
+    out "both positive\n"
 }
-else {
-    out "Condition is false"
+
+if a > 10 or b > 10 {
+    out "at least one is big\n"
+}
+
+if not a == 99 {
+    out "a is not 99\n"
+}</pre>
+
+      <h3>Conditional Statements</h3>
+      <pre>if score >= 90 {
+    out "A\n"
+} else if score >= 75 {
+    out "B\n"
+} else if score >= 60 {
+    out "C\n"
+} else {
+    out "F\n"
 }</pre>
 
       <h3>Loops</h3>
+      <p>Count loop — iterates N times:</p>
       <pre>var i = 5
 rep i {
-    out "{i},"
-    if i == 3 {
+    out "{i}\n"
+}</pre>
+
+      <p>While loop — repeats while condition is true:</p>
+      <pre>var x = 0
+rep x < 10 {
+    out "{x}\n"
+    x++
+}</pre>
+
+      <p>Use <span class="code-label">stop</span> to break out of a loop early:</p>
+      <pre>var i = 0
+rep 20 {
+    if i == 5 {
         stop
     }
+    out "{i}\n"
+    i++
 }</pre>
-      <p>The <span class="code-label">rep</span> loop iterates N times. The counter variable must be defined beforehand.</p>
     </div>
 
     <div class="section doc-section">
