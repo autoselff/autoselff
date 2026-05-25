@@ -196,8 +196,9 @@ public:
         aktualny = glowa;
         eol = false;
         aktualny->wypisz();
-        // Jeżeli to jedyny element – zwróć true (koniec)
+        // Jeżeli to jedyny element – ustaw EOL i zwróć true (koniec)
         if (aktualny->getNast() == nullptr) {
+            eol = true;
             return true;
         }
         return false;
@@ -220,6 +221,7 @@ public:
         aktualny->wypisz();
         // Sprawdź czy to ostatni element
         if (aktualny->getNast() == nullptr) {
+            eol = true;
             return true;
         }
         return false;
