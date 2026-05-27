@@ -1,0 +1,48 @@
+\doxysection{src/\+lexer.c File Reference}
+\hypertarget{lexer_8c}{}\label{lexer_8c}\index{src/lexer.c@{src/lexer.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$ctype.\+h$>$}\newline
+{\ttfamily \+\#include "{}lexer.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \doxymbox{\hyperlink{lexer_8c_ad3b3bfe49a48465919e89afb7724faaa}{tokenize}} (const char \texorpdfstring{$\ast$}{*}src, \doxymbox{\hyperlink{structToken}{Token}} tokens\+[$\,$]\+)
+\item 
+size\+\_\+t \doxymbox{\hyperlink{lexer_8c_afc945d02bcfe0cde8f2d2b6efe5e7333}{process\+\_\+includes}} (\doxymbox{\hyperlink{structToken}{Token}} tokens\+[$\,$]\+, size\+\_\+t token\+\_\+count, \doxymbox{\hyperlink{structToken}{Token}} output\+[$\,$]\+, size\+\_\+t max\+\_\+tokens)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{lexer_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{lexer_8c_afc945d02bcfe0cde8f2d2b6efe5e7333}\index{lexer.c@{lexer.c}!process\_includes@{process\_includes}}
+\index{process\_includes@{process\_includes}!lexer.c@{lexer.c}}
+\doxysubsubsection{\texorpdfstring{process\_includes()}{process\_includes()}}
+{\footnotesize\ttfamily \label{lexer_8c_afc945d02bcfe0cde8f2d2b6efe5e7333} 
+size\+\_\+t process\+\_\+includes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{tokens}{\+[$\,$]\+, }\item[{size\+\_\+t}]{token\+\_\+count}{, }\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{output}{\+[$\,$]\+, }\item[{size\+\_\+t}]{max\+\_\+tokens}{}\end{DoxyParamCaption})}
+
+\Hypertarget{lexer_8c_ad3b3bfe49a48465919e89afb7724faaa}\index{lexer.c@{lexer.c}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!lexer.c@{lexer.c}}
+\doxysubsubsection{\texorpdfstring{tokenize()}{tokenize()}}
+{\footnotesize\ttfamily \label{lexer_8c_ad3b3bfe49a48465919e89afb7724faaa} 
+size\+\_\+t tokenize (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{src}{, }\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{tokens}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{lexer_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{lexer_8c_a6285c8b304820df9b40d3fbea77c7ef0}\index{lexer.c@{lexer.c}!kw@{kw}}
+\index{kw@{kw}!lexer.c@{lexer.c}}
+\doxysubsubsection{\texorpdfstring{kw}{kw}}
+{\footnotesize\ttfamily \label{lexer_8c_a6285c8b304820df9b40d3fbea77c7ef0} 
+const char\texorpdfstring{$\ast$}{*} kw}
+
+\Hypertarget{lexer_8c_a6e2d2148929ac137f2e2ef4091a4dc69}\index{lexer.c@{lexer.c}!type@{type}}
+\index{type@{type}!lexer.c@{lexer.c}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{lexer_8c_a6e2d2148929ac137f2e2ef4091a4dc69} 
+\doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921}{Token\+Type}} type}
+

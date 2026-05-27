@@ -1,0 +1,18 @@
+\doxysection{lexer.\+h}
+\hypertarget{lexer_8h_source}{}\label{lexer_8h_source}\index{include/lexer.h@{include/lexer.h}}
+\doxymbox{\hyperlink{lexer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LEXER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LEXER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{kinnie_8h}{kinnie.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Tokenizes\ a\ null-\/terminated\ source\ string\ into\ tokens[];\ returns\ the\ number\ of\ tokens\ produced.}}
+\DoxyCodeLine{00007\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{lexer_8h_ad3b3bfe49a48465919e89afb7724faaa}{tokenize}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *src,\ \doxymbox{\hyperlink{structToken}{Token}}\ tokens[]);}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Expands\ all\ \`{}add\ "{}file"{}`\ directives\ by\ inlining\ the\ tokenized\ content\ of\ each\ file;\ returns\ the\ total\ token\ count\ written\ to\ output[].}}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{lexer_8h_afc945d02bcfe0cde8f2d2b6efe5e7333}{process\_includes}}(\doxymbox{\hyperlink{structToken}{Token}}\ tokens[],\ \textcolor{keywordtype}{size\_t}\ token\_count,\ \doxymbox{\hyperlink{structToken}{Token}}\ output[],\ \textcolor{keywordtype}{size\_t}\ max\_tokens);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,91 @@
+\doxysection{include/\+parser.h File Reference}
+\hypertarget{parser_8h}{}\label{parser_8h}\index{include/parser.h@{include/parser.h}}
+{\ttfamily \+\#include "{}kinnie.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \doxymbox{\hyperlink{parser_8h_a03e3041e35c48728b1110e93096f90a4}{find\+\_\+block\+\_\+end}} (\doxymbox{\hyperlink{structToken}{Token}} tokens\+[$\,$]\+, size\+\_\+t token\+\_\+count, size\+\_\+t start)
+\item 
+size\+\_\+t \doxymbox{\hyperlink{parser_8h_ae10cfedc6a4c32300afba81fe8dcf8e7}{copy\+\_\+block}} (\doxymbox{\hyperlink{structToken}{Token}} tokens\+[$\,$]\+, size\+\_\+t start, size\+\_\+t end, \doxymbox{\hyperlink{structToken}{Token}} dst\+[$\,$]\+)
+\item 
+void \doxymbox{\hyperlink{parser_8h_a28c8a3c194dd163f101be730ee8f3ed8}{parse\+\_\+functions}} (\doxymbox{\hyperlink{structToken}{Token}} tokens\+[$\,$]\+, size\+\_\+t token\+\_\+count)
+\item 
+void \doxymbox{\hyperlink{parser_8h_a8fe9988d681679476425ef159410c2ed}{parse\+\_\+structs}} (\doxymbox{\hyperlink{structToken}{Token}} tokens\+[$\,$]\+, size\+\_\+t token\+\_\+count)
+\item 
+\doxymbox{\hyperlink{structFunction}{Function}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{parser_8h_a983d976b0499330c8d5f9ee67aedbf22}{get\+\_\+function}} (const char \texorpdfstring{$\ast$}{*}name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structFunction}{Function}} \doxymbox{\hyperlink{parser_8h_a3643d1e5f053fda4fe41d0f6f3a10879}{functions}} \+[\doxymbox{\hyperlink{kinnie_8h_ad1654ced9bcc36245fe19075b868c1ae}{MAX\+\_\+\+FUNCTIONS}}]\+
+\item 
+size\+\_\+t \doxymbox{\hyperlink{parser_8h_ab9aed525fdce9a98913909ba1859fd24}{function\+\_\+count}}
+\item 
+\doxymbox{\hyperlink{structStruct}{Struct}} \doxymbox{\hyperlink{parser_8h_a6a8169e70c91b919d3dd60864c4a11be}{structs}} \+[\doxymbox{\hyperlink{kinnie_8h_ad2a257000bc920c71f4ba505998d8240}{MAX\+\_\+\+STRUCTS}}]\+
+\item 
+size\+\_\+t \doxymbox{\hyperlink{parser_8h_a992f77fdf900ead4aecee6788a7d65a0}{struct\+\_\+count}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{parser_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{parser_8h_ae10cfedc6a4c32300afba81fe8dcf8e7}\index{parser.h@{parser.h}!copy\_block@{copy\_block}}
+\index{copy\_block@{copy\_block}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{copy\_block()}{copy\_block()}}
+{\footnotesize\ttfamily \label{parser_8h_ae10cfedc6a4c32300afba81fe8dcf8e7} 
+size\+\_\+t copy\+\_\+block (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{tokens}{\+[$\,$]\+, }\item[{size\+\_\+t}]{start}{, }\item[{size\+\_\+t}]{end}{, }\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{dst}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+\Hypertarget{parser_8h_a03e3041e35c48728b1110e93096f90a4}\index{parser.h@{parser.h}!find\_block\_end@{find\_block\_end}}
+\index{find\_block\_end@{find\_block\_end}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{find\_block\_end()}{find\_block\_end()}}
+{\footnotesize\ttfamily \label{parser_8h_a03e3041e35c48728b1110e93096f90a4} 
+size\+\_\+t find\+\_\+block\+\_\+end (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{tokens}{\+[$\,$]\+, }\item[{size\+\_\+t}]{token\+\_\+count}{, }\item[{size\+\_\+t}]{start}{}\end{DoxyParamCaption})}
+
+\Hypertarget{parser_8h_a983d976b0499330c8d5f9ee67aedbf22}\index{parser.h@{parser.h}!get\_function@{get\_function}}
+\index{get\_function@{get\_function}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{get\_function()}{get\_function()}}
+{\footnotesize\ttfamily \label{parser_8h_a983d976b0499330c8d5f9ee67aedbf22} 
+\doxymbox{\hyperlink{structFunction}{Function}} \texorpdfstring{$\ast$}{*} get\+\_\+function (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{parser_8h_a28c8a3c194dd163f101be730ee8f3ed8}\index{parser.h@{parser.h}!parse\_functions@{parse\_functions}}
+\index{parse\_functions@{parse\_functions}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{parse\_functions()}{parse\_functions()}}
+{\footnotesize\ttfamily \label{parser_8h_a28c8a3c194dd163f101be730ee8f3ed8} 
+void parse\+\_\+functions (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{tokens}{\+[$\,$]\+, }\item[{size\+\_\+t}]{token\+\_\+count}{}\end{DoxyParamCaption})}
+
+\Hypertarget{parser_8h_a8fe9988d681679476425ef159410c2ed}\index{parser.h@{parser.h}!parse\_structs@{parse\_structs}}
+\index{parse\_structs@{parse\_structs}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{parse\_structs()}{parse\_structs()}}
+{\footnotesize\ttfamily \label{parser_8h_a8fe9988d681679476425ef159410c2ed} 
+void parse\+\_\+structs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{tokens}{\+[$\,$]\+, }\item[{size\+\_\+t}]{token\+\_\+count}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{parser_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{parser_8h_ab9aed525fdce9a98913909ba1859fd24}\index{parser.h@{parser.h}!function\_count@{function\_count}}
+\index{function\_count@{function\_count}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{function\_count}{function\_count}}
+{\footnotesize\ttfamily \label{parser_8h_ab9aed525fdce9a98913909ba1859fd24} 
+size\+\_\+t function\+\_\+count\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{parser_8h_a3643d1e5f053fda4fe41d0f6f3a10879}\index{parser.h@{parser.h}!functions@{functions}}
+\index{functions@{functions}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{functions}{functions}}
+{\footnotesize\ttfamily \label{parser_8h_a3643d1e5f053fda4fe41d0f6f3a10879} 
+\doxymbox{\hyperlink{structFunction}{Function}} functions\+[\doxymbox{\hyperlink{kinnie_8h_ad1654ced9bcc36245fe19075b868c1ae}{MAX\+\_\+\+FUNCTIONS}}]\+\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{parser_8h_a992f77fdf900ead4aecee6788a7d65a0}\index{parser.h@{parser.h}!struct\_count@{struct\_count}}
+\index{struct\_count@{struct\_count}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{struct\_count}{struct\_count}}
+{\footnotesize\ttfamily \label{parser_8h_a992f77fdf900ead4aecee6788a7d65a0} 
+size\+\_\+t struct\+\_\+count\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{parser_8h_a6a8169e70c91b919d3dd60864c4a11be}\index{parser.h@{parser.h}!structs@{structs}}
+\index{structs@{structs}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{structs}{structs}}
+{\footnotesize\ttfamily \label{parser_8h_a6a8169e70c91b919d3dd60864c4a11be} 
+\doxymbox{\hyperlink{structStruct}{Struct}} structs\+[\doxymbox{\hyperlink{kinnie_8h_ad2a257000bc920c71f4ba505998d8240}{MAX\+\_\+\+STRUCTS}}]\+\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,71 @@
+\doxysection{src/\+codegen.c File Reference}
+\hypertarget{codegen_8c}{}\label{codegen_8c}\index{src/codegen.c@{src/codegen.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+{\ttfamily \+\#include "{}codegen.\+h"{}}\newline
+{\ttfamily \+\#include "{}parser.\+h"{}}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02}{Ret\+Type}} \{ \doxymbox{\hyperlink{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02a60360153711a155fafed2845c9e981db}{RT\+\_\+\+VOID}}
+, \doxymbox{\hyperlink{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02a9f6662ff3435d46c6d91f47d3743f232}{RT\+\_\+\+DOUBLE}}
+, \doxymbox{\hyperlink{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02a0a653b41bba3d33c1017cbc8643c5268}{RT\+\_\+\+STRING}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{codegen_8c_af2a2cbe7a3af5e59ff7f615b3c8b0d79}{convert\+\_\+tokens\+\_\+to\+\_\+cpp}} (\doxymbox{\hyperlink{structToken}{Token}} tokens\+[$\,$]\+, size\+\_\+t token\+\_\+count, FILE \texorpdfstring{$\ast$}{*}out, int indent, int is\+\_\+main)
+\item 
+void \doxymbox{\hyperlink{codegen_8c_a8da64b2af9ec8d4c7d8b6a2db3506d2a}{convert\+\_\+to\+\_\+cpp}} (\doxymbox{\hyperlink{structToken}{Token}} tokens\+[$\,$]\+, size\+\_\+t token\+\_\+count, const char \texorpdfstring{$\ast$}{*}output\+\_\+path, \doxymbox{\hyperlink{structCompileStats}{Compile\+Stats}} \texorpdfstring{$\ast$}{*}stats)
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{codegen_8c_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02}\index{codegen.c@{codegen.c}!RetType@{RetType}}
+\index{RetType@{RetType}!codegen.c@{codegen.c}}
+\doxysubsubsection{\texorpdfstring{RetType}{RetType}}
+{\footnotesize\ttfamily \label{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02} 
+enum \doxymbox{\hyperlink{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02}{Ret\+Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RT\_VOID@{RT\_VOID}!codegen.c@{codegen.c}}
+\index{codegen.c@{codegen.c}!RT\_VOID@{RT\_VOID}}
+}\Hypertarget{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02a60360153711a155fafed2845c9e981db}\label{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02a60360153711a155fafed2845c9e981db} 
+RT\+\_\+\+VOID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RT\_DOUBLE@{RT\_DOUBLE}!codegen.c@{codegen.c}}
+\index{codegen.c@{codegen.c}!RT\_DOUBLE@{RT\_DOUBLE}}
+}\Hypertarget{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02a9f6662ff3435d46c6d91f47d3743f232}\label{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02a9f6662ff3435d46c6d91f47d3743f232} 
+RT\+\_\+\+DOUBLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RT\_STRING@{RT\_STRING}!codegen.c@{codegen.c}}
+\index{codegen.c@{codegen.c}!RT\_STRING@{RT\_STRING}}
+}\Hypertarget{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02a0a653b41bba3d33c1017cbc8643c5268}\label{codegen_8c_a4b2fc086593ab9f00fb3e7ce1b1c2b02a0a653b41bba3d33c1017cbc8643c5268} 
+RT\+\_\+\+STRING&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{codegen_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{codegen_8c_a8da64b2af9ec8d4c7d8b6a2db3506d2a}\index{codegen.c@{codegen.c}!convert\_to\_cpp@{convert\_to\_cpp}}
+\index{convert\_to\_cpp@{convert\_to\_cpp}!codegen.c@{codegen.c}}
+\doxysubsubsection{\texorpdfstring{convert\_to\_cpp()}{convert\_to\_cpp()}}
+{\footnotesize\ttfamily \label{codegen_8c_a8da64b2af9ec8d4c7d8b6a2db3506d2a} 
+void convert\+\_\+to\+\_\+cpp (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{tokens}{\+[$\,$]\+, }\item[{size\+\_\+t}]{token\+\_\+count}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{output\+\_\+path}{, }\item[{\doxymbox{\hyperlink{structCompileStats}{Compile\+Stats}} \texorpdfstring{$\ast$}{*}}]{stats}{}\end{DoxyParamCaption})}
+
+\Hypertarget{codegen_8c_af2a2cbe7a3af5e59ff7f615b3c8b0d79}\index{codegen.c@{codegen.c}!convert\_tokens\_to\_cpp@{convert\_tokens\_to\_cpp}}
+\index{convert\_tokens\_to\_cpp@{convert\_tokens\_to\_cpp}!codegen.c@{codegen.c}}
+\doxysubsubsection{\texorpdfstring{convert\_tokens\_to\_cpp()}{convert\_tokens\_to\_cpp()}}
+{\footnotesize\ttfamily \label{codegen_8c_af2a2cbe7a3af5e59ff7f615b3c8b0d79} 
+void convert\+\_\+tokens\+\_\+to\+\_\+cpp (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structToken}{Token}}}]{tokens}{\+[$\,$]\+, }\item[{size\+\_\+t}]{token\+\_\+count}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{out}{, }\item[{int}]{indent}{, }\item[{int}]{is\+\_\+main}{}\end{DoxyParamCaption})}
+

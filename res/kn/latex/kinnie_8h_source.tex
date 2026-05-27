@@ -1,0 +1,93 @@
+\doxysection{kinnie.\+h}
+\hypertarget{kinnie_8h_source}{}\label{kinnie_8h_source}\index{include/kinnie.h@{include/kinnie.h}}
+\doxymbox{\hyperlink{kinnie_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ KINNIE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ KINNIE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifdef\ \_\_has\_include}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#\ \ if\ \_\_has\_include(<SDL2/SDL.h>)}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#\ \ \ \ include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#\ \ \ \ define\ HAVE\_SDL\ 1}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#\ \ else}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#\ \ \ \ define\ HAVE\_SDL\ 0}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#\ \ endif}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#\ \ if\ \_\_has\_include(<SDL2/SDL\_ttf.h>)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#\ \ \ \ include\ <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#\ \ \ \ define\ HAVE\_SDL\_TTF\ 1}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#\ \ else}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#\ \ \ \ define\ HAVE\_SDL\_TTF\ 0}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#\ \ endif}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#\ \ define\ HAVE\_SDL\ 0}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#\ \ define\ HAVE\_SDL\_TTF\ 0}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ KINNIE\_VERSION\ \ \ \ \ \ "{}4.1.1"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ MAX\_TOKENS\ \ \ \ \ \ \ \ \ \ 2048}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ MAX\_EXPANDED\_TOKENS\ 8192}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ MAX\_FUNCTIONS\ \ \ \ \ \ \ 64}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ MAX\_NAME\_LEN\ \ \ \ \ \ \ \ 32}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ MAX\_STRING\_LEN\ \ \ \ \ \ 128}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ MAX\_FUNC\_PARAMS\ \ \ \ \ 16}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ ARG\_BUF\_LEN\ \ \ \ \ \ \ \ \ 256}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ MAX\_STRUCTS\ \ \ \ \ \ \ \ \ 32}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ MAX\_STRUCT\_FIELDS\ \ \ 32}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ MAX\_STRUCT\_METHODS\ \ 16}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921ad1e9d9cc11f212d81f533e96ae6dc8ef}{TOK\_VAR}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921ad04b5014e7c0a60669fc1394b4d1149d}{TOK\_PRINT}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a1b2f2311a42e73ed08b8e578bc6d2a65}{TOK\_IDENT}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921acdae166ca0040147b5e2225cb23184d5}{TOK\_NUMBER}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a6aed8afdbbec5110277334eba1c8d1ef}{TOK\_STRING}},}
+\DoxyCodeLine{00038\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a73a4b35fee0e132f60664a77473a2215}{TOK\_ASSIGN}},}
+\DoxyCodeLine{00039\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921abbef668480d44ae148958a9b3185a7fe}{TOK\_MORE}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a6b845b3a93ef4834fac6e3728d6a7b1f}{TOK\_LESS}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a738fab9f730a0fb766fa02328739b7c3}{TOK\_EQUALS}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921ae2b8e64244cbce68640e8e01d19cac87}{TOK\_NOT\_EQUALS}},}
+\DoxyCodeLine{00040\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921ac7b995a136b59b2387c1026e9e248c0d}{TOK\_MORE\_EQUALS}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921ad274e361bfc8badfa5715ae0ec3c5dc6}{TOK\_LESS\_EQUALS}},}
+\DoxyCodeLine{00041\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a3ec3e69d4c44cb5d156c405a3057cc0c}{TOK\_PLUS}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921ace7126e93c23ad19bd1a1cd512a26e01}{TOK\_MINUS}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a548a0c51448add0bec01dc46a4049afd}{TOK\_MUL}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a66de0be184d7c7dc89405bdfa1410c2f}{TOK\_DIV}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921aecb12e8e14bcb4efd38c09ca9fd7372d}{TOK\_MOD}},}
+\DoxyCodeLine{00042\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921aee5e9bd304d0b8dba470b61e1643dcd8}{TOK\_EOF}},}
+\DoxyCodeLine{00043\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a8d2354a2848bef7997b95f130b9173d2}{TOK\_LOOP\_START}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a9fe943e3955be2f165bdfda10d3449e0}{TOK\_FUN\_START}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a62cd43ee5141f808dee48f5ffe283f9b}{TOK\_IF\_START}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921adc2d9632ea8598c447cca671691c3e21}{TOK\_ELSE}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921aff129834bc4016845b837946c1e955fc}{TOK\_END}},}
+\DoxyCodeLine{00044\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a3bb8a777c0c5138199f79909278acd91}{TOK\_LBRACE}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921ac2324c073142a809e8e558338eabcdb8}{TOK\_RBRACE}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921af00756b5ca336be1b943c41958e6d1ff}{TOK\_LBRACKET}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a266e200f9ce88f1985ed320f6250178d}{TOK\_RBRACKET}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a4299c017619d68c0eee3691ba4ef0f0a}{TOK\_LSQUARE}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a77e8f791bd61d2726d4d657bb05d2c42}{TOK\_RSQUARE}},}
+\DoxyCodeLine{00045\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a62cdeef3d4613afb658caae912e99272}{TOK\_COMMA}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a78558a9c513e1ca8dcdd14a5adf4dc67}{TOK\_DOT}},}
+\DoxyCodeLine{00046\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921af8893308d51b51856d01c2c6e1239af6}{TOK\_RETURN}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921aef6f4411a631e677f0638ea845ae4753}{TOK\_KEY\_PRESSED}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921ab54628988ff2e303ff2a41d7d222ef7d}{TOK\_KEY\_DOWN}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a786832efc48e4720cd0a0a100347e17c}{TOK\_ADD}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921acd0272d52eb1760fa4b0d134baee158d}{TOK\_STOP}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a417a25bcd8fc65f858f650a68976f9a6}{TOK\_STRUCT}},}
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921aded8a8d44c88f59c76bc60bb60a63db8}{TOK\_AND}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a780be26c548e285625baea0cba46490c}{TOK\_OR}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a690348178aef87c1ab4964e783497892}{TOK\_NOT}},}
+\DoxyCodeLine{00048\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a9bc5286321f4d739b6183a0731bf704b}{TOK\_PLUS\_ASSIGN}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921ab9273c0c1c65825be0e704e903e22398}{TOK\_MINUS\_ASSIGN}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a89005a9f21c7caf2086aed180f384f53}{TOK\_MUL\_ASSIGN}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a408841ba8c20ba3eea1438dafb6a6f70}{TOK\_DIV\_ASSIGN}},}
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a0ea847a6fe67b3104cf1e8421616a021}{TOK\_INCREMENT}},\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921afac39f40b844f1f3b2ee82b7a3dba404}{TOK\_DECREMENT}},}
+\DoxyCodeLine{00050\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921a7d71d1596897e780f46f5c34b7e51ece}{TOK\_UNKNOWN}}}
+\DoxyCodeLine{00051\ \}\ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921}{TokenType}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{kinnie_8h_aa520fbf142ba1e7e659590c07da31921}{TokenType}}\ \doxymbox{\hyperlink{structToken_a67919af9f3a80dc0b28a0ab1e6d5bf8a}{type}};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structToken_a2ec31c7a025930b77bf4a9a3b68c5d5c}{text}}[\doxymbox{\hyperlink{kinnie_8h_a4fa9aad0e9c7cc2e344b679cdbb2b67d}{MAX\_STRING\_LEN}}];}
+\DoxyCodeLine{00056\ \}\ \doxymbox{\hyperlink{structToken}{Token}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structFunction_a429945d5710a92c2d48f5d63e50ff4dd}{name}}[\doxymbox{\hyperlink{kinnie_8h_afd709f201d7643c3909621f620ea648a}{MAX\_NAME\_LEN}}];}
+\DoxyCodeLine{00060\ \ \ \ \ \doxymbox{\hyperlink{structToken}{Token}}\ \doxymbox{\hyperlink{structFunction_a7093cfca0d0d80c640064755c97d1e29}{tokens}}[\doxymbox{\hyperlink{kinnie_8h_a09886d6ba96e67553bf3c49ed8ade975}{MAX\_TOKENS}}];}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structFunction_ae60497eb93bc7c7291d03d76d0355cc6}{token\_count}};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structFunction_a75044d367804e83c7a97726d3e98c807}{param\_names}}[\doxymbox{\hyperlink{kinnie_8h_aaed5ae6c34d7b2a1d2b33a551198c3a9}{MAX\_FUNC\_PARAMS}}][\doxymbox{\hyperlink{kinnie_8h_afd709f201d7643c3909621f620ea648a}{MAX\_NAME\_LEN}}];}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structFunction_a98295dd1eaf2a93a641464082c69addd}{param\_count}};}
+\DoxyCodeLine{00064\ \}\ \doxymbox{\hyperlink{structFunction}{Function}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structStruct_a1b433257a144507f54287f1ebad91d62}{name}}[\doxymbox{\hyperlink{kinnie_8h_afd709f201d7643c3909621f620ea648a}{MAX\_NAME\_LEN}}];}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structStruct_a24c38861d692a63be4318b8cb667b74e}{field\_names}}[\doxymbox{\hyperlink{kinnie_8h_ac81be3932baad5613a86536dfebcc4bc}{MAX\_STRUCT\_FIELDS}}][\doxymbox{\hyperlink{kinnie_8h_afd709f201d7643c3909621f620ea648a}{MAX\_NAME\_LEN}}];}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structStruct_acda05ad525957ea4d04d6bc40109a4e0}{field\_defaults}}[\doxymbox{\hyperlink{kinnie_8h_ac81be3932baad5613a86536dfebcc4bc}{MAX\_STRUCT\_FIELDS}}][\doxymbox{\hyperlink{kinnie_8h_a4fa9aad0e9c7cc2e344b679cdbb2b67d}{MAX\_STRING\_LEN}}];}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structStruct_ae8e296b2f2e838d4cb74b4d4b1d1760b}{field\_is\_string}}[\doxymbox{\hyperlink{kinnie_8h_ac81be3932baad5613a86536dfebcc4bc}{MAX\_STRUCT\_FIELDS}}];}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structStruct_a6e7e418c2f6c740eee076b03a58730cf}{field\_is\_array}}[\doxymbox{\hyperlink{kinnie_8h_ac81be3932baad5613a86536dfebcc4bc}{MAX\_STRUCT\_FIELDS}}];}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structStruct_a2fd554c9a436811f4f7e393206ac1fe9}{field\_is\_struct}}[\doxymbox{\hyperlink{kinnie_8h_ac81be3932baad5613a86536dfebcc4bc}{MAX\_STRUCT\_FIELDS}}];}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structStruct_a372185b111f7bea699b976b6a6a2c72a}{field\_struct\_types}}[\doxymbox{\hyperlink{kinnie_8h_ac81be3932baad5613a86536dfebcc4bc}{MAX\_STRUCT\_FIELDS}}][\doxymbox{\hyperlink{kinnie_8h_afd709f201d7643c3909621f620ea648a}{MAX\_NAME\_LEN}}];}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structStruct_a1b0f6ca21ba15bfb1a1538fa7a0911ee}{field\_count}};}
+\DoxyCodeLine{00075\ \ \ \ \ \doxymbox{\hyperlink{structFunction}{Function}}\ \doxymbox{\hyperlink{structStruct_afab1d0ad4021dd795f4df5d77c2720c6}{methods}}[\doxymbox{\hyperlink{kinnie_8h_a7a20f7e85b8512f0e81d2528ff055b62}{MAX\_STRUCT\_METHODS}}];}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structStruct_a980ab0d76a763fae4d1cfb804a30d61c}{method\_count}};}
+\DoxyCodeLine{00077\ \}\ \doxymbox{\hyperlink{structStruct}{Struct}};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structCompileStats_acc3fc228a78d6f8be8335ed31ee1a0b3}{tokenize\_time}};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structCompileStats_a9dc484bf1decb5c06cb6018c16724ecb}{includes\_time}};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structCompileStats_aed11802547e391894dbf9f7f411e16d8}{parse\_time}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structCompileStats_adac50593b82d5f5a97b4a5b4e2226aa4}{codegen\_time}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structCompileStats_a2323a961514ba15eaf1e6080fd4c8b4b}{compile\_time}};}
+\DoxyCodeLine{00085\ \}\ \doxymbox{\hyperlink{structCompileStats}{CompileStats}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

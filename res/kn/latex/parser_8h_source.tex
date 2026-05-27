@@ -1,0 +1,32 @@
+\doxysection{parser.\+h}
+\hypertarget{parser_8h_source}{}\label{parser_8h_source}\index{include/parser.h@{include/parser.h}}
+\doxymbox{\hyperlink{parser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PARSER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PARSER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{kinnie_8h}{kinnie.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{structFunction}{Function}}\ \doxymbox{\hyperlink{parser_8h_a3643d1e5f053fda4fe41d0f6f3a10879}{functions}}[\doxymbox{\hyperlink{kinnie_8h_ad1654ced9bcc36245fe19075b868c1ae}{MAX\_FUNCTIONS}}];}
+\DoxyCodeLine{00007\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{size\_t}\ \ \ \doxymbox{\hyperlink{parser_8h_ab9aed525fdce9a98913909ba1859fd24}{function\_count}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{structStruct}{Struct}}\ \ \ \doxymbox{\hyperlink{parser_8h_a6a8169e70c91b919d3dd60864c4a11be}{structs}}[\doxymbox{\hyperlink{kinnie_8h_ad2a257000bc920c71f4ba505998d8240}{MAX\_STRUCTS}}];}
+\DoxyCodeLine{00009\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{size\_t}\ \ \ \doxymbox{\hyperlink{parser_8h_a992f77fdf900ead4aecee6788a7d65a0}{struct\_count}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Returns\ the\ index\ of\ the\ closing\ \`{}\}`\ that\ matches\ the\ \`{}\{`\ depth\ starting\ at\ position\ start.}}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{parser_8h_a03e3041e35c48728b1110e93096f90a4}{find\_block\_end}}(\doxymbox{\hyperlink{structToken}{Token}}\ tokens[],\ \textcolor{keywordtype}{size\_t}\ token\_count,\ \textcolor{keywordtype}{size\_t}\ start);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Copies\ tokens[start..end)\ into\ dst[]\ and\ appends\ a\ TOK\_EOF\ sentinel;\ returns\ the\ number\ of\ tokens\ copied.}}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{parser_8h_ae10cfedc6a4c32300afba81fe8dcf8e7}{copy\_block}}(\doxymbox{\hyperlink{structToken}{Token}}\ tokens[],\ \textcolor{keywordtype}{size\_t}\ start,\ \textcolor{keywordtype}{size\_t}\ end,\ \doxymbox{\hyperlink{structToken}{Token}}\ dst[]);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Scans\ tokens\ and\ populates\ the\ global\ functions[]\ array;\ struct\ bodies\ are\ skipped.}}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{parser_8h_a28c8a3c194dd163f101be730ee8f3ed8}{parse\_functions}}(\doxymbox{\hyperlink{structToken}{Token}}\ tokens[],\ \textcolor{keywordtype}{size\_t}\ token\_count);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Scans\ tokens\ and\ populates\ the\ global\ structs[]\ array\ with\ field\ and\ method\ definitions.}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{parser_8h_a8fe9988d681679476425ef159410c2ed}{parse\_structs}}(\doxymbox{\hyperlink{structToken}{Token}}\ tokens[],\ \textcolor{keywordtype}{size\_t}\ token\_count);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ Returns\ a\ pointer\ to\ the\ Function\ with\ the\ given\ name,\ or\ NULL\ if\ not\ found.}}
+\DoxyCodeLine{00024\ \doxymbox{\hyperlink{structFunction}{Function}}\ *\doxymbox{\hyperlink{parser_8h_a983d976b0499330c8d5f9ee67aedbf22}{get\_function}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

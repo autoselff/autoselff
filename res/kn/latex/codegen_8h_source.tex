@@ -1,0 +1,19 @@
+\doxysection{codegen.\+h}
+\hypertarget{codegen_8h_source}{}\label{codegen_8h_source}\index{include/codegen.h@{include/codegen.h}}
+\doxymbox{\hyperlink{codegen_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CODEGEN\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CODEGEN\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{kinnie_8h}{kinnie.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Recursively\ converts\ a\ token\ sequence\ into\ C++\ statements\ written\ to\ out\ at\ the\ given\ indentation\ level.}}
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{codegen_8h_af2a2cbe7a3af5e59ff7f615b3c8b0d79}{convert\_tokens\_to\_cpp}}(\doxymbox{\hyperlink{structToken}{Token}}\ tokens[],\ \textcolor{keywordtype}{size\_t}\ token\_count,\ FILE\ *out,\ \textcolor{keywordtype}{int}\ indent,\ \textcolor{keywordtype}{int}\ is\_main);}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Parses\ structs\ and\ functions\ from\ tokens,\ then\ writes\ a\ complete\ C++\ source\ file\ to\ output\_path;\ fills\ stats\ if\ non-\/NULL.}}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{codegen_8h_a8da64b2af9ec8d4c7d8b6a2db3506d2a}{convert\_to\_cpp}}(\doxymbox{\hyperlink{structToken}{Token}}\ tokens[],\ \textcolor{keywordtype}{size\_t}\ token\_count,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *output\_path,\ \doxymbox{\hyperlink{structCompileStats}{CompileStats}}\ *stats);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
