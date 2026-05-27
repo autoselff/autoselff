@@ -261,7 +261,8 @@ tab.remove(len(tab) - 1)  // removes last element</pre>
       <p><strong>Both methods work on nested arrays:</strong></p>
       <pre>var tab = [1, 2, [3, 4]]
 tab[2].remove(0)   // tab is now [1, 2, [4]]
-tab[2].add(99)     // tab is now [1, 2, [4, 99]]</pre>
+tab[2].add(99)     // tab is now [1, 2, [4, 99]]
+tab.clear()        // []</pre>
 
       <h4>Multi-dimensional Arrays</h4>
       <p>Arrays can be nested arbitrarily to create multi-dimensional structures.</p>
@@ -282,7 +283,7 @@ matrix[1][2] = 99
 cube[0][0][1] = 42</pre>
 
       <p><strong>Iterating through multi-dimensional arrays:</strong></p>
-      <pre>fun display2D(t) {
+      <pre>fun display2D(t[]) {
     var i = 0
     var rows = len(t)
     rep rows {
@@ -530,7 +531,7 @@ fun main() {
 }</pre>
 
       <p><strong>Note:</strong> Arrays passed to functions are always passed by reference. Modifications inside the function affect the original array.</p>
-      <pre>fun foo(t) {
+      <pre>fun foo(t[]) {
     var l = len(t) - 1
     rep l {
         var temp = l + 1
