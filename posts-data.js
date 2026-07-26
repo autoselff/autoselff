@@ -1,5 +1,12 @@
 const POSTS = [
     {
+        date: "26-07-2026",
+        content: "We made a spaceship simulator for GMTK Game Jam 2026 ",
+        link: "https://autoselff.itch.io/maneuver",
+        linkText: "Play on Itch.io",
+        tags: ["announcement", "gamejam", "gamedev"]
+    },
+    {
         date: "05-03-2026",
         content: "After one month since I launched my game's Steam page, I managed to reach 100 wishlists. It may not be a perfect number, but despite that, I'm proud. Thanks everyone for the support and see you!",
         link: "https://store.steampowered.com/app/4532890/ANTA3/",
