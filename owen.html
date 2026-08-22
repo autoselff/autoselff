@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>autoselff | Owen</title>
+  <script src="globals/common.js"></script>
+  <script src="globals/marquee.js"></script>
+  <style>
+    .status-banner {
+      background-color: rgba(100, 150, 255, 0.15);
+      border: 2px solid rgba(100, 150, 255, 0.5);
+      border-radius: 4px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .status-banner h3 {
+      margin-top: 0;
+      color: #88bbff;
+    }
+
+    .status-banner p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .owen-button {
+      display: inline-block;
+      background-color: #88bbff;
+      color: black;
+      font-family: 'Doto', monospace;
+      font-weight: bold;
+      border: none;
+      padding: 12px 30px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      margin: 10px 6px 0;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .owen-button:hover {
+      transform: scale(1.05);
+      background-color: #aaccff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">Owen</div>
+      <div class="nav">
+        <a href="index.html">HOME</a>
+      </div>
+    </div>
+
+    <script src="globals/web-buttons.js"></script>
+
+    <div class="section">
+      <h2>About</h2>
+      <p>Privacy-first mobile chat client for AI models.
+        Connect with your own API keys to any OpenAI-compatible endpoint. Nothing passes through any intermediate server.</p>
+    </div>
+
+    <div class="section">
+      <div class="status-banner">
+        <h3>Download</h3>
+        <p>Android APK, direct from GitHub Releases. Bring your own API keys.</p>
+        <a href="https://github.com/autoselff/owen_app/releases/download/1.0.0/app-release.apk" class="owen-button">Download APK</a>
+        <a href="https://github.com/autoselff/owen_app" class="owen-button">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Why Owen</h2>
+      <p>Most AI chat apps route your messages through their own backend. Owen doesn't: it talks directly to the provider you configure, stores everything locally and encrypted, and ships zero telemetry. Your keys and your history never leave the device except as requests to the endpoint you chose.</p>
+    </div>
+
+    <div class="section">
+      <p>Developer: autoselff</p>
+      <p>Status: Released</p>
+      <p>Platforms: Android</p>
+      <p>Made with Flutter</p>
+      <p>License: GPL-3.0</p>
+    </div>
+
+    <div class="section">
+      <h2>Privacy &amp; security</h2>
+      <p>No telemetry or analytics. The only network traffic goes to the endpoints you configure yourself.</p>
+      <p>API keys live exclusively in the system keystore (Android Keystore) via flutter_secure_storage, never in the database or app files.</p>
+      <p>Conversation history sits in a local SQLCipher-encrypted database; the DB key is a random 256-bit CSPRNG value, also kept only in the keystore.</p>
+      <p>Screenshots blocked (FLAG_SECURE): the content can't be captured or screen-recorded, and is hidden in the app switcher and on untrusted displays.</p>
+      <p>App lock (optional): require biometrics or the device PIN to open Owen; it re-locks whenever the app is backgrounded.</p>
+      <p>No device backups. allowBackup=false plus data-extraction rules exclude the app from Android cloud backup and device-to-device transfer.</p>
+      <p>"Delete all data" removes every provider, key, and message from the device.</p>
+    </div>
+
+    <div class="section">
+      <h2>Features</h2>
+      <p>Streaming responses (SSE, token by token).</p>
+      <p>Local multi-conversation history, with rename and delete.</p>
+      <p>Per-conversation provider and model selection + custom system prompt.</p>
+      <p>Compress a long conversation into a compact context brief, then fork a fresh, cheaper conversation that carries it in its system prompt. The original is kept intact.</p>
+      <p>Markdown, code blocks, and LaTeX rendering; copy replies.</p>
+      <p>Material You dynamic colour on supported devices, light/dark.</p>
+    </div>
+
+    <div class="section">
+      <h2>Supported providers</h2>
+      <p>A single universal adapter for the OpenAI /chat/completions format (with streaming), so it works with DeepSeek, OpenAI, OpenRouter, Groq, Mistral, Together, as well as locally-run Ollama and LM Studio. Ready-made presets are in the add-provider screen; any other endpoint can be added manually (Base URL + key + model list).</p>
+      <p>DeepSeek example: Base URL https://api.deepseek.com/v1, models deepseek-chat, deepseek-reasoner.</p>
+    </div>
+
+    <div class="section">
+      <h2>Library</h2>
+      <div class="game-buttons">
+        <img src="res/ow/ss1.png" alt="ss1" title="ss1" />
+        <img src="res/ow/ss2.png" alt="ss2" title="ss2" />
+      </div>
+    </div>
+
+    <script src="globals/footer.js"></script>
+  </div>
+</body>
+
+</html>
