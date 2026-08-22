@@ -1,5 +1,12 @@
 const POSTS = [
     {
+        date: "22-08-2026",
+        content: "ANTA3 Demo is finally out and playable on Steam. Feel free to download it, try building some houses for the penguins, and let me know what you think. Wishlist the full game if you enjoy it!",
+        link: "https://store.steampowered.com/app/4998680/ANTA3_Demo/",
+        linkText: "Play ANTA3 Demo on Steam",
+        tags: ["announcement", "anta3", "gamedev"]
+    },
+    {
         date: "26-07-2026",
         content: "We made a spaceship simulator for GMTK Game Jam 2026 ",
         link: "https://autoselff.itch.io/maneuver",
