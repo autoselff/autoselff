@@ -138,7 +138,7 @@ function loadCommonIndex() {
       left: 12px;
       z-index: 10000;
       display: inline-block;
-      border: 1px dotted white;
+      border: 1px solid white;
       padding: 5px 10px;
       text-decoration: none;
     }
@@ -146,19 +146,19 @@ function loadCommonIndex() {
     .nav a.home-link:hover {
       color: white;
       background: transparent;
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
     .section {
-      border-top: 1px dotted white;
+      border-top: 1px solid white;
       padding: 20px;
       margin: 0 10px;
     }
 
     .section p a {
       color: white;
-      text-decoration: underline dotted;
+      text-decoration: underline;
       text-underline-offset: 4px;
     }
 
@@ -167,7 +167,7 @@ function loadCommonIndex() {
     }
 
     .game-section {
-      border-top: 1px dotted white;
+      border-top: 1px solid white;
       padding: 20px;
       margin: 0 10px;
       margin-bottom: 30px;
@@ -202,7 +202,7 @@ function loadCommonIndex() {
 
     .game-buttons img:hover {
       filter: brightness(0.8);
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
@@ -242,19 +242,19 @@ function loadCommonIndex() {
     }
 
     .skill-category {
-      border: 1px dotted white;
+      border: 1px solid white;
       padding: 20px;
     }
 
     .skill-category:hover {
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
     .skill-category h3 {
       margin: 0 0 15px 0;
       font-size: 18px;
-      border-bottom: 1px dotted white;
+      border-bottom: 1px solid white;
       padding-bottom: 10px;
     }
 
@@ -268,7 +268,7 @@ function loadCommonIndex() {
     .skill-tag {
       display: inline-block;
       padding: 6px 12px;
-      border: 1px dotted white;
+      border: 1px solid white;
       background-color: black;
       font-size: 12px;
       cursor: default;
@@ -279,18 +279,18 @@ function loadCommonIndex() {
     }
 
     .skill-tag:hover {
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 2px;
     }
 
     .post {
-      border: 1px dotted white;
+      border: 1px solid white;
       padding: 20px;
       margin-bottom: 20px;
     }
 
     .post:hover {
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
@@ -315,7 +315,7 @@ function loadCommonIndex() {
       height: auto;
       margin-top: 15px;
       margin-bottom: 10px;
-      border: 1px dotted white;
+      border: 1px solid white;
     }
 
     .post-link-container {
@@ -325,15 +325,19 @@ function loadCommonIndex() {
     .post-link {
       display: inline-block;
       padding: 8px 16px;
-      border: 1px dotted white;
+      border: 1px solid white;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff !important;
+      font-family: 'Doto', monospace;
+      font-size: 1em;
+      font-weight: 700;
       text-decoration: none;
-      color: inherit;
-      font-size: 0.9em;
     }
 
     .post-link:hover {
+      color: #fff !important;
       text-decoration: none;
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
@@ -347,7 +351,7 @@ function loadCommonIndex() {
     .post-tag {
       font-size: 0.8em;
       padding: 4px 10px;
-      border: 1px dotted white;
+      border: 1px solid white;
       opacity: 0.8;
       font-family: monospace;
     }
@@ -372,9 +376,10 @@ function loadCommonIndex() {
     .posts-button {
       display: inline-block;
       padding: 8px 16px;
-      border: 1px dotted white;
+      border: 1px solid white;
+      background: black;
+      color: white;
       text-decoration: none;
-      color: inherit;
       font-weight: bold;
       font-size: 1em;
       cursor: pointer;
@@ -384,7 +389,7 @@ function loadCommonIndex() {
       text-decoration: none;
       background: transparent;
       color: white;
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 

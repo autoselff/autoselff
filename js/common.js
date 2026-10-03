@@ -115,7 +115,7 @@ function loadCommon() {
       left: 12px;
       z-index: 10000;
       display: inline-block;
-      border: 1px dotted white;
+      border: 1px solid white;
       padding: 5px 10px;
       text-decoration: none;
     }
@@ -123,19 +123,19 @@ function loadCommon() {
     .nav a.home-link:hover {
       color: white;
       background: transparent;
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
     .section {
-      border-top: 1px dotted white;
+      border-top: 1px solid white;
       padding: 20px;
       margin: 0 10px;
     }
 
     .section p a {
       color: white;
-      text-decoration: underline dotted;
+      text-decoration: underline;
       text-underline-offset: 4px;
     }
 
@@ -210,7 +210,7 @@ function loadCommon() {
 
     .game-buttons img:not(.screenshot):hover {
       filter: brightness(0.8);
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
@@ -263,7 +263,7 @@ function loadCommon() {
     }
 
     .download-button:hover {
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
@@ -299,7 +299,7 @@ function loadCommon() {
     .project-details th,
     .project-details td {
       padding: 8px 12px;
-      border-bottom: 1px dotted white;
+      border-bottom: 1px solid white;
     }
 
     .project-details tr:last-child th,
@@ -313,13 +313,13 @@ function loadCommon() {
     }
 
     .post {
-      border: 1px dotted white;
+      border: 1px solid white;
       padding: 20px;
       margin-bottom: 20px;
     }
 
     .post:hover {
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
@@ -344,21 +344,25 @@ function loadCommon() {
       height: auto;
       margin-top: 15px;
       margin-bottom: 10px;
-      border: 1px dotted white;
+      border: 1px solid white;
     }
 
     .post-link {
       display: inline-block;
       padding: 8px 16px;
-      border: 1px dotted white;
+      border: 1px solid white;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff !important;
+      font-family: 'Doto', monospace;
+      font-size: 1em;
+      font-weight: 700;
       text-decoration: none;
-      color: inherit;
-      font-size: 0.9em;
     }
 
     .post-link:hover {
+      color: #fff !important;
       text-decoration: none;
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
@@ -372,7 +376,7 @@ function loadCommon() {
     .post-tag {
       font-size: 0.8em;
       padding: 4px 10px;
-      border: 1px dotted white;
+      border: 1px solid white;
       opacity: 0.8;
       font-family: monospace;
     }
@@ -403,9 +407,10 @@ function loadCommon() {
       display: inline-block;
       padding: 12px 24px;
       background: rgba(255, 255, 255, 0.1);
-      border: 2px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid white;
+      background: black;
+      color: white;
       text-decoration: none;
-      color: inherit;
       font-weight: bold;
       font-size: 1em;
       cursor: pointer;
@@ -415,7 +420,7 @@ function loadCommon() {
       text-decoration: none;
       background: rgba(255, 255, 255, 0.2);
       border-color: rgba(255, 255, 255, 0.5);
-      outline: 1px dotted white;
+      outline: 1px solid white;
       outline-offset: 3px;
     }
 
