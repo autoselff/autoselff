@@ -3,8 +3,8 @@
 
 <head>
   <title>autoselff | Sandbox</title>
-  <script src="globals/common.js"></script>
-  <script src="globals/marquee.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/marquee.js"></script>
 </head>
 
 <body>
@@ -12,11 +12,11 @@
     <div class="header">
       <div class="logo">Sandbox</div>
       <div class="nav">
-        <a href="index.html">HOME</a>
+        <a class="home-link" href="index.html">← ALL PROJECTS</a>
       </div>
     </div>
 
-    <script src="globals/web-buttons.js"></script>
+    <script src="js/web-buttons.js"></script>
 
     <div class="section">
       <h2>About</h2>
@@ -24,13 +24,17 @@
         stone.</p>
     </div>
 
-    <div class="section">
-      <p>Release Date: 23.11.2025</p>
-      <p>Developer: AUTOSELFF</p>
-      <p>Status: In development</p>
-      <p>Genere: Sandbox, Simulation</p>
-      <p>Made with Raylib</p>
-    </div>
+    <div class="section project-details">
+        <table>
+          <tbody>
+          <tr><th>Release Date</th><td>23.11.2025</td></tr>
+          <tr><th>Developer</th><td>AUTOSELFF</td></tr>
+          <tr><th>Status</th><td>In development</td></tr>
+          <tr><th>Genre</th><td>Sandbox, Simulation</td></tr>
+          <tr><th>Made with</th><td>Raylib</td></tr>
+          </tbody>
+        </table>
+      </div>
 
     <div class="section">
       <h2>Library</h2>
@@ -42,8 +46,8 @@
       </div>
 
       <div class="game-buttons">
-        <img src="res/sb/ss1.png" alt="ss1" title="ss1" />
-        <img src="res/sb/ss2.png" alt="ss2" title="ss2" />
+        <img class="screenshot" src="res/sb/ss1.png" alt="ss1" title="ss1" />
+        <img class="screenshot" src="res/sb/ss2.png" alt="ss2" title="ss2" />
       </div>
     </div>
 
@@ -53,7 +57,9 @@
       </a>
     </div>
 
-    <script src="globals/footer.js"></script>
+    <script src="js/posts-data.js"></script>
+    <script src="js/posts-render.js"></script>
+    <script src="js/footer.js"></script>
   </div>
 </body>
 

@@ -132,10 +132,38 @@ function loadCommonIndex() {
       text-decoration: underline;
     }
 
+    .nav a.home-link {
+      position: fixed;
+      top: 42px;
+      left: 12px;
+      z-index: 10000;
+      display: inline-block;
+      border: 1px dotted white;
+      padding: 5px 10px;
+      text-decoration: none;
+    }
+
+    .nav a.home-link:hover {
+      color: white;
+      background: transparent;
+      outline: 1px dotted white;
+      outline-offset: 3px;
+    }
+
     .section {
       border-top: 1px dotted white;
       padding: 20px;
       margin: 0 10px;
+    }
+
+    .section p a {
+      color: white;
+      text-decoration: underline dotted;
+      text-underline-offset: 4px;
+    }
+
+    .section p a:hover {
+      text-decoration-style: solid;
     }
 
     .game-section {
@@ -164,13 +192,18 @@ function loadCommonIndex() {
     .game-buttons img {
       width: 120px;
       height: auto;
-      cursor: pointer;
-      transition: transform 0.2s ease;
       border: 1px solid white;
+      display: block;
+    }
+
+    .game-buttons a {
+      cursor: pointer;
     }
 
     .game-buttons img:hover {
-      transform: scale(1.15);
+      filter: brightness(0.8);
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
     img {
@@ -209,16 +242,13 @@ function loadCommonIndex() {
     }
 
     .skill-category {
-      border: 1px solid white;
+      border: 1px dotted white;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
     }
 
     .skill-category:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
     .skill-category h3 {
@@ -238,10 +268,9 @@ function loadCommonIndex() {
     .skill-tag {
       display: inline-block;
       padding: 6px 12px;
-      border: 1px solid white;
+      border: 1px dotted white;
       background-color: black;
       font-size: 12px;
-      transition: all 0.2s ease;
       cursor: default;
 
       font-family: 'Doto', monospace;
@@ -250,34 +279,30 @@ function loadCommonIndex() {
     }
 
     .skill-tag:hover {
-      background-color: white;
-      color: black;
+      outline: 1px dotted white;
+      outline-offset: 2px;
     }
 
     .post {
-      border: 1px solid white;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
-      border-radius: 4px;
+      border: 1px dotted white;
       padding: 20px;
       margin-bottom: 20px;
     }
 
     .post:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.2);
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
     .post-date {
       font-size: 0.85em;
       opacity: 0.6;
       margin-bottom: 10px;
-      font-family: monospace;
+      font-family: 'Doto', monospace;
+      text-transform: uppercase;
     }
 
     .post-content {
-      line-height: 1.6;
       margin-bottom: 10px;
       white-space: pre-wrap;
       font-family: 'Doto', monospace;
@@ -288,10 +313,9 @@ function loadCommonIndex() {
     .post-image {
       max-width: 100%;
       height: auto;
-      border-radius: 4px;
       margin-top: 15px;
       margin-bottom: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px dotted white;
     }
 
     .post-link-container {
@@ -301,18 +325,16 @@ function loadCommonIndex() {
     .post-link {
       display: inline-block;
       padding: 8px 16px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 4px;
+      border: 1px dotted white;
       text-decoration: none;
       color: inherit;
-      transition: background 0.3s ease, border-color 0.3s ease;
       font-size: 0.9em;
     }
 
     .post-link:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
     .post-tags {
@@ -325,9 +347,8 @@ function loadCommonIndex() {
     .post-tag {
       font-size: 0.8em;
       padding: 4px 10px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 3px;
-      opacity: 0.7;
+      border: 1px dotted white;
+      opacity: 0.8;
       font-family: monospace;
     }
 
@@ -342,19 +363,6 @@ function loadCommonIndex() {
       }
     }
 
-    /* Alternative: Minimal style (uncomment if you prefer this) */
-    /*
-    .post {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 20px 0;
-      margin-bottom: 0;
-    }
-
-    .post:last-child {
-      border-bottom: none;
-    }
-    */
-
     /* Latest post on homepage */
     .latest-post {
       margin-bottom: 0;
@@ -363,28 +371,23 @@ function loadCommonIndex() {
     /* Posts button */
     .posts-button {
       display: inline-block;
-      padding: 12px 24px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      border-radius: 4px;
+      padding: 8px 16px;
+      border: 1px dotted white;
       text-decoration: none;
       color: inherit;
       font-weight: bold;
       font-size: 1em;
-      transition: all 0.3s ease;
       cursor: pointer;
     }
 
     .posts-button:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.5);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      background: transparent;
+      color: white;
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
-    .posts-button:active {
-      transform: translateY(0);
-    }
   `;
   head.appendChild(style);
 }

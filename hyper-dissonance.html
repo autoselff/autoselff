@@ -3,8 +3,8 @@
 
 <head>
   <title>autoselff | HyperDissonance</title>
-  <script src="globals/common.js"></script>
-  <script src="globals/marquee.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/marquee.js"></script>
 </head>
 
 <body>
@@ -13,12 +13,12 @@
       <div class="logo">HyperDissonance</div>
 
       <div class="nav">
-        <a href="index.html">HOME</a>
+        <a class="home-link" href="index.html">← ALL PROJECTS</a>
       </div>
 
     </div>
 
-    <script src="globals/web-buttons.js"></script>
+    <script src="js/web-buttons.js"></script>
 
     <div class="section">
       <h2>About</h2>
@@ -29,14 +29,18 @@
       </p>
     </div>
 
-    <div class="section">
-      <p>Release Date: 06.11.2025</p>
-      <p>Developers: AUTOSELFF, METADEV</p>
-      <p>Status: Released</p>
-      <p>Platforms: Linux, Windows</p>
-      <p>Genere: Horror, Indie, Hacking, Cyberpunk</p>
-      <p>Made with Godot 4</p>
-    </div>
+    <div class="section project-details">
+        <table>
+          <tbody>
+          <tr><th>Release Date</th><td>06.11.2025</td></tr>
+          <tr><th>Developers</th><td>AUTOSELFF, METADEV</td></tr>
+          <tr><th>Status</th><td>Released</td></tr>
+          <tr><th>Platforms</th><td>Linux, Windows</td></tr>
+          <tr><th>Genre</th><td>Horror, Indie, Hacking, Cyberpunk</td></tr>
+          <tr><th>Made with</th><td>Godot 4</td></tr>
+          </tbody>
+        </table>
+      </div>
 
     <div class="section">
       <h2>Library</h2>
@@ -47,14 +51,14 @@
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="game-buttons">
-        <img src="res/hd/ss1.png" alt="ss1" title="ss1" />
-        <img src="res/hd/ss2.png" alt="ss2" title="ss2" />
-        <img src="res/hd/ss3.png" alt="ss2" title="ss3" />
-        <img src="res/hd/ss4.png" alt="ss2" title="ss4" />
-        <img src="res/hd/ss5.png" alt="ss1" title="ss5" />
-        <img src="res/hd/ss6.png" alt="ss2" title="ss6" />
-        <img src="res/hd/ss7.png" alt="ss2" title="ss7" />
-        <img src="res/hd/ss8.png" alt="ss2" title="ss8" />
+        <img class="screenshot" src="res/hd/ss1.png" alt="ss1" title="ss1" />
+        <img class="screenshot" src="res/hd/ss2.png" alt="ss2" title="ss2" />
+        <img class="screenshot" src="res/hd/ss3.png" alt="ss2" title="ss3" />
+        <img class="screenshot" src="res/hd/ss4.png" alt="ss2" title="ss4" />
+        <img class="screenshot" src="res/hd/ss5.png" alt="ss1" title="ss5" />
+        <img class="screenshot" src="res/hd/ss6.png" alt="ss2" title="ss6" />
+        <img class="screenshot" src="res/hd/ss7.png" alt="ss2" title="ss7" />
+        <img class="screenshot" src="res/hd/ss8.png" alt="ss2" title="ss8" />
       </div>
     </div>
 
@@ -67,7 +71,9 @@
       </a>
     </div>
 
-    <script src="globals/footer.js"></script>
+    <script src="js/posts-data.js"></script>
+    <script src="js/posts-render.js"></script>
+    <script src="js/footer.js"></script>
   </div>
 </body>
 

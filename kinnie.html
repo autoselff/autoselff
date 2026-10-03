@@ -3,8 +3,8 @@
 
 <head>
   <title>autoselff | kinnie</title>
-  <script src="globals/common.js"></script>
-  <script src="globals/marquee.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/marquee.js"></script>
   <style>
     h2, h3 {
       color: white;
@@ -111,15 +111,15 @@
       border: none;
       padding: 12px 30px;
       cursor: pointer;
-      transition: transform 0.2s ease, background-color 0.2s ease;
       margin-top: 10px;
       border-radius: 4px;
       text-decoration: none;
     }
 
     .github-contrib-button:hover {
-      transform: scale(1.05);
       background-color: #aaccff;
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
     .important {
@@ -141,11 +141,11 @@
     <div class="header">
       <div class="logo">kinnie</div>
       <div class="nav">
-        <a href="index.html">HOME</a>
+        <a class="home-link" href="index.html">← ALL PROJECTS</a>
       </div>
     </div>
 
-    <script src="globals/web-buttons.js"></script>
+    <script src="js/web-buttons.js"></script>
 
     <div class="section">
       <h2>About</h2>
@@ -161,14 +161,18 @@
       </div>
     </div>
 
-    <div class="section">
-      <p><strong>Version:</strong> v4.1.2</p>
-      <p><strong>Developer:</strong> AUTOSELFF</p>
-      <p><strong>Status:</strong> In Development</p>
-      <p><strong>Platforms:</strong> Linux</p>
-      <p><strong>Genre:</strong> Programming language, Tool</p>
-      <p><strong>Made in:</strong> C/C++</p>
-    </div>
+    <div class="section project-details">
+        <table>
+          <tbody>
+            <tr><th>Version</th><td>v4.1.2</td></tr>
+            <tr><th>Developer</th><td>AUTOSELFF</td></tr>
+            <tr><th>Status</th><td>In Development</td></tr>
+            <tr><th>Platforms</th><td>Linux</td></tr>
+            <tr><th>Genre</th><td>Programming language, Tool</td></tr>
+            <tr><th>Made in</th><td>C/C++</td></tr>
+          </tbody>
+        </table>
+      </div>
 
     <div class="section">
       <h2>Library</h2>
@@ -690,7 +694,9 @@ playerX = playerX + speed * deltaTime</pre>
 
     <!-- DOCUMENTATION END -->
 
-    <script src="globals/footer.js"></script>
+    <script src="js/posts-data.js"></script>
+    <script src="js/posts-render.js"></script>
+    <script src="js/footer.js"></script>
   </div>
 </body>
 

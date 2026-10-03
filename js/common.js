@@ -109,10 +109,38 @@ function loadCommon() {
       text-decoration: underline;
     }
 
+    .nav a.home-link {
+      position: fixed;
+      top: 42px;
+      left: 12px;
+      z-index: 10000;
+      display: inline-block;
+      border: 1px dotted white;
+      padding: 5px 10px;
+      text-decoration: none;
+    }
+
+    .nav a.home-link:hover {
+      color: white;
+      background: transparent;
+      outline: 1px dotted white;
+      outline-offset: 3px;
+    }
+
     .section {
       border-top: 1px dotted white;
       padding: 20px;
       margin: 0 10px;
+    }
+
+    .section p a {
+      color: white;
+      text-decoration: underline dotted;
+      text-underline-offset: 4px;
+    }
+
+    .section p a:hover {
+      text-decoration-style: solid;
     }
 
     .section:first-child {
@@ -173,12 +201,53 @@ function loadCommon() {
     .game-buttons img {
       width: 300px;
       height: auto;
-      cursor: pointer;
-      transition: transform 0.2s ease;
+      display: block;
     }
 
-    .game-buttons img:hover {
-      transform: scale(1.15);
+    .game-buttons a {
+      cursor: pointer;
+    }
+
+    .game-buttons img:not(.screenshot):hover {
+      filter: brightness(0.8);
+      outline: 1px dotted white;
+      outline-offset: 3px;
+    }
+
+    .screenshot {
+      cursor: zoom-in;
+    }
+
+    .screenshot-viewer {
+      max-width: 100vw;
+      max-height: 100vh;
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    .screenshot-viewer::backdrop {
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    .screenshot-viewer img {
+      display: block;
+      max-width: 95vw;
+      max-height: 95vh;
+      object-fit: contain;
+      cursor: zoom-out;
+    }
+
+    .screenshot-viewer button {
+      position: fixed;
+      top: 12px;
+      right: 16px;
+      border: 1px solid white;
+      background: black;
+      color: white;
+      font: inherit;
+      font-size: 24px;
+      cursor: pointer;
     }
 
     .download-button {
@@ -189,14 +258,13 @@ function loadCommon() {
       border: 2px solid white;
       padding: 10px 20px;
       cursor: pointer;
-      transition: transform 0.2s ease, background-color 0.2s ease;
       margin: 10px auto;
       display: inline-block;
     }
 
     .download-button:hover {
-      transform: scale(1.1);
-      background-color: #ccc;
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
     a button {
@@ -222,30 +290,48 @@ function loadCommon() {
       border: 0;
     }
 
+    .project-details table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .project-details th,
+    .project-details td {
+      padding: 8px 12px;
+      border-bottom: 1px dotted white;
+    }
+
+    .project-details tr:last-child th,
+    .project-details tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .project-details th {
+      width: 30%;
+      font-weight: 700;
+    }
+
     .post {
-      border: 1px solid white;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
-      border-radius: 4px;
+      border: 1px dotted white;
       padding: 20px;
       margin-bottom: 20px;
     }
 
     .post:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.2);
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
     .post-date {
       font-size: 0.85em;
       opacity: 0.6;
       margin-bottom: 10px;
-      font-family: monospace;
+      font-family: 'Doto', monospace;
+      text-transform: uppercase;
     }
 
     .post-content {
-      line-height: 1.6;
       margin-bottom: 10px;
       white-space: pre-wrap;
       font-family: 'Doto', monospace;
@@ -256,31 +342,24 @@ function loadCommon() {
     .post-image {
       max-width: 100%;
       height: auto;
-      border-radius: 4px;
       margin-top: 15px;
       margin-bottom: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .post-link-container {
-      margin-top: 15px;
+      border: 1px dotted white;
     }
 
     .post-link {
       display: inline-block;
       padding: 8px 16px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 4px;
+      border: 1px dotted white;
       text-decoration: none;
       color: inherit;
-      transition: background 0.3s ease, border-color 0.3s ease;
       font-size: 0.9em;
     }
 
     .post-link:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
     .post-tags {
@@ -293,9 +372,8 @@ function loadCommon() {
     .post-tag {
       font-size: 0.8em;
       padding: 4px 10px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 3px;
-      opacity: 0.7;
+      border: 1px dotted white;
+      opacity: 0.8;
       font-family: monospace;
     }
 
@@ -315,19 +393,6 @@ function loadCommon() {
       }
     }
 
-    /* Alternative: Minimal style (uncomment if you prefer this) */
-    /*
-    .post {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 20px 0;
-      margin-bottom: 0;
-    }
-
-    .post:last-child {
-      border-bottom: none;
-    }
-    */
-
     /* Latest post on homepage */
     .latest-post {
       margin-bottom: 0;
@@ -339,27 +404,42 @@ function loadCommon() {
       padding: 12px 24px;
       background: rgba(255, 255, 255, 0.1);
       border: 2px solid rgba(255, 255, 255, 0.3);
-      border-radius: 4px;
       text-decoration: none;
       color: inherit;
       font-weight: bold;
       font-size: 1em;
-      transition: all 0.3s ease;
       cursor: pointer;
     }
 
     .posts-button:hover {
+      text-decoration: none;
       background: rgba(255, 255, 255, 0.2);
       border-color: rgba(255, 255, 255, 0.5);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      outline: 1px dotted white;
+      outline-offset: 3px;
     }
 
-    .posts-button:active {
-      transform: translateY(0);
-    }
   `;
   head.appendChild(style);
 }
 
 loadCommon();
+
+document.addEventListener('click', (event) => {
+  const screenshot = event.target.closest('.screenshot');
+  if (!screenshot) return;
+
+  let viewer = document.querySelector('.screenshot-viewer');
+  if (!viewer) {
+    viewer = document.createElement('dialog');
+    viewer.className = 'screenshot-viewer';
+    viewer.innerHTML = '<button type="button" aria-label="Close screenshot">×</button><img alt="">';
+    viewer.addEventListener('click', () => viewer.close());
+    document.body.appendChild(viewer);
+  }
+
+  const image = viewer.querySelector('img');
+  image.src = screenshot.src;
+  image.alt = screenshot.alt;
+  viewer.showModal();
+});

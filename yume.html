@@ -3,8 +3,8 @@
 
 <head>
   <title>autoselff | YUME</title>
-  <script src="globals/common.js"></script>
-  <script src="globals/marquee.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/marquee.js"></script>
 </head>
 
 <body>
@@ -12,11 +12,11 @@
     <div class="header">
       <div class="logo">YUME</div>
       <div class="nav">
-        <a href="index.html">HOME</a>
+        <a class="home-link" href="index.html">← ALL PROJECTS</a>
       </div>
     </div>
 
-    <script src="globals/web-buttons.js"></script>
+    <script src="js/web-buttons.js"></script>
 
     <div class="section">
       <h2>About</h2>
@@ -25,14 +25,18 @@
         people who value simplicity and creating unique computer games ;)</p>
     </div>
 
-    <div class="section">
-      <p>Release Date: ??.??.????</p>
-      <p>Developer: AUTOSELFF</p>
-      <p>Status: In development</p>
-      <p>Platforms: Linux, Windows</p>
-      <p>Genere: Engine, Tool</p>
-      <p>API: OpenGL</p>
-    </div>
+    <div class="section project-details">
+        <table>
+          <tbody>
+            <tr><th>Release Date</th><td>??.??.????</td></tr>
+            <tr><th>Developer</th><td>AUTOSELFF</td></tr>
+            <tr><th>Status</th><td>In development</td></tr>
+            <tr><th>Platforms</th><td>Linux, Windows</td></tr>
+            <tr><th>Genre</th><td>Engine, Tool</td></tr>
+            <tr><th>API</th><td>OpenGL</td></tr>
+          </tbody>
+        </table>
+      </div>
 
     <div class="section">
       <h2>Library</h2>
@@ -45,10 +49,10 @@
       </div>
 
       <div class="game-buttons">
-        <img src="res/yu/ss1.png" alt="YUME Screenshot 1" title="Screenshot 1" />
-        <img src="res/yu/ss2.png" alt="YUME Screenshot 2" title="Screenshot 2" />
-        <img src="res/yu/ss3.png" alt="YUME Screenshot 3" title="Screenshot 3" />
-        <img src="res/yu/ss4.png" alt="YUME Screenshot 4" title="Screenshot 4" />
+        <img class="screenshot" src="res/yu/ss1.png" alt="YUME Screenshot 1" title="Screenshot 1" />
+        <img class="screenshot" src="res/yu/ss2.png" alt="YUME Screenshot 2" title="Screenshot 2" />
+        <img class="screenshot" src="res/yu/ss3.png" alt="YUME Screenshot 3" title="Screenshot 3" />
+        <img class="screenshot" src="res/yu/ss4.png" alt="YUME Screenshot 4" title="Screenshot 4" />
       </div>
     </div>
 
@@ -66,7 +70,9 @@
       </a>
     </div>
 
-    <script src="globals/footer.js"></script>
+    <script src="js/posts-data.js"></script>
+    <script src="js/posts-render.js"></script>
+    <script src="js/footer.js"></script>
   </div>
 </body>
 

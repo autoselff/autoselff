@@ -3,8 +3,8 @@
 
 <head>
   <title>autoselff | ecosystem</title>
-  <script src="globals/common.js"></script>
-  <script src="globals/marquee.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/marquee.js"></script>
 </head>
 
 <body>
@@ -12,24 +12,28 @@
     <div class="header">
       <div class="logo">ecosystem</div>
       <div class="nav">
-        <a href="index.html">HOME</a>
+        <a class="home-link" href="index.html">← ALL PROJECTS</a>
       </div>
     </div>
 
-    <script src="globals/web-buttons.js"></script>
+    <script src="js/web-buttons.js"></script>
 
     <div class="section">
       <h2>About</h2>
       <p>A simple ecosystem simulation in which all organisms have procedural animations. More information in video.</p>
     </div>
 
-    <div class="section">
-      <p>Release Date: 10.01.2026</p>
-      <p>Developer: AUTOSELFF</p>
-      <p>Status: Released</p>
-      <p>Genere: Simulation</p>
-      <p>Made with SDL3</p>
-    </div>
+    <div class="section project-details">
+        <table>
+          <tbody>
+          <tr><th>Release Date</th><td>10.01.2026</td></tr>
+          <tr><th>Developer</th><td>AUTOSELFF</td></tr>
+          <tr><th>Status</th><td>Released</td></tr>
+          <tr><th>Genre</th><td>Simulation</td></tr>
+          <tr><th>Made with</th><td>SDL3</td></tr>
+          </tbody>
+        </table>
+      </div>
 
     <div class="section">
       <h2>Library</h2>
@@ -41,8 +45,8 @@
       </div>
 
       <div class="game-buttons">
-        <img src="res/ec/ss1.png" alt="ss1" title="ss1" />
-        <img src="res/ec/ss2.png" alt="ss2" title="ss2" />
+        <img class="screenshot" src="res/ec/ss1.png" alt="ss1" title="ss1" />
+        <img class="screenshot" src="res/ec/ss2.png" alt="ss2" title="ss2" />
       </div>
     </div>
 
@@ -52,7 +56,9 @@
       </a>
     </div>
 
-    <script src="globals/footer.js"></script>
+    <script src="js/posts-data.js"></script>
+    <script src="js/posts-render.js"></script>
+    <script src="js/footer.js"></script>
   </div>
 </body>
 
