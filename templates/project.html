@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>autoselff | Guy</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>autoselff | $title</title>
   <link rel="icon" href="res/icon.png" />
   <link rel="stylesheet" href="styles.css" />
   <script src="js/social-links.js"></script>
@@ -15,7 +15,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="logo">Guy</div>
+      <div class="logo">$title</div>
       <div class="nav">
         <a class="home-link" href="index.html">&lt;- ALL PROJECTS</a>
       </div>
@@ -25,29 +25,29 @@
 
     <div class="section">
       <h2>About</h2>
-      <p>A game about being a guy, based on real life events made in one hour.</p>
-      <p>Click to survive.</p>
+      <p>$description</p>
     </div>
 
     <div class="section project-details">
-        <table>
-          <tbody>
-          <tr><th>Release Date</th><td>19.12.2025</td></tr>
+      <table>
+        <tbody>
           <tr><th>Developer</th><td>AUTOSELFF</td></tr>
-          <tr><th>Status</th><td>Released</td></tr>
-          <tr><th>Platforms</th><td>HTML5</td></tr>
-          <tr><th>Genre</th><td>Arcade</td></tr>
-          <tr><th>Made with</th><td>Godot 4</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-    <div class="section" style="text-align: center;">
-      <iframe src="res/guy/export/guy.html" width="700" height="562" style="border:none;"></iframe>
+          <tr><th>Status</th><td>$status</td></tr>
+          <tr><th>Platforms</th><td>$platforms</td></tr>
+          <tr><th>Genre</th><td>$genre</td></tr>
+          <tr><th>Made with</th><td>$engine</td></tr>
+        </tbody>
+      </table>
     </div>
 
+    <div class="section">
+      <h2>Library</h2>
+$library
+    </div>
+$project_link
     <script src="js/posts-data.js"></script>
     <script src="js/posts-render.js"></script>
+$ai_note
     <script src="js/footer.js"></script>
   </div>
 </body>

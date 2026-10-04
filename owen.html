@@ -3,33 +3,15 @@
 
 <head>
   <title>autoselff | Owen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="res/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="js/social-links.js"></script>
   <script src="js/common.js"></script>
   <script src="js/marquee.js"></script>
   <style>
-    .status-banner,
-    .status-banner:hover {
-      border: 2px solid white;
-      outline-color: white;
-      outline-width: 2px;
-    }
-
-    .owen-button {
-      display: inline-block;
-      background-color: black;
-      color: white;
-      font-family: 'Doto', monospace;
-      font-weight: bold;
-      border: 2px solid white;
-      padding: 12px 30px;
-      cursor: pointer;
-      margin: 10px 6px 0;
-      text-decoration: none;
-    }
-
-    .owen-button:hover {
-      outline: 2px solid white;
-      outline-offset: 3px;
-    }
+    .panel-button { margin: 10px 6px 0; }
   </style>
 </head>
 
@@ -51,11 +33,11 @@
     </div>
 
     <div class="section">
-      <div class="post status-banner">
+      <div class="post panel">
         <h2>Download</h2>
         <p>Android APK, direct from GitHub Releases. Bring your own API keys.</p>
-        <a href="https://github.com/autoselff/owen_app/releases/download/1.0.0/app-release.apk" class="owen-button">Download APK</a>
-        <a href="https://github.com/autoselff/owen_app" class="owen-button">View on GitHub</a>
+        <a href="https://github.com/autoselff/owen_app/releases/download/1.0.0/app-release.apk" class="panel-button">Download APK</a>
+        <a href="https://github.com/autoselff/owen_app" class="panel-button">View on GitHub</a>
       </div>
     </div>
 
@@ -67,7 +49,7 @@
     <div class="section project-details">
         <table>
           <tbody>
-            <tr><th>Developer</th><td>autoselff</td></tr>
+            <tr><th>Developer</th><td>AUTOSELFF</td></tr>
             <tr><th>Status</th><td>Released</td></tr>
             <tr><th>Platforms</th><td>Android</td></tr>
             <tr><th>Made with</th><td>Flutter</td></tr>
@@ -114,12 +96,7 @@
     <script src="js/posts-data.js"></script>
     <script src="js/posts-render.js"></script>
 
-    <div class="section">
-      <aside class="post" aria-labelledby="ai-note-title">
-        <h2 id="ai-note-title">AI assistance</h2>
-        <p>The concept, design, and development of this project are my own. AI (LLM) tools served only as assistance with selected parts. I disclose AI use in every project where it contributes.</p>
-      </aside>
-    </div>
+    <script src="js/ai-note.js"></script>
 
     <script src="js/footer.js"></script>
   </div>

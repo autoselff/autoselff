@@ -3,6 +3,11 @@
 
 <head>
   <title>autoselff | kinnie</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="res/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="js/social-links.js"></script>
   <script src="js/common.js"></script>
   <script src="js/marquee.js"></script>
   <style>
@@ -43,28 +48,6 @@
       color: #88bbff;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 15px 0;
-      background-color: rgba(255,255,255,0.05);
-    }
-
-    th, td {
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 12px;
-      text-align: left;
-    }
-
-    th {
-      background-color: rgba(255,255,255,0.1);
-      font-weight: bold;
-    }
-
-    tr:hover {
-      background-color: rgba(255,255,255,0.08);
-    }
-
     ul, ol {
       margin: 10px 0;
       padding-left: 30px;
@@ -81,31 +64,6 @@
       color: #88bbff;
       font-family: 'Courier New', monospace;
       font-size: 0.9em;
-    }
-
-    .status-banner,
-    .status-banner:hover {
-      border: 2px solid white;
-      outline-color: white;
-      outline-width: 2px;
-    }
-
-    .github-contrib-button {
-      display: inline-block;
-      background-color: black;
-      color: white;
-      font-family: 'Doto', monospace;
-      font-weight: bold;
-      border: 2px solid white;
-      padding: 12px 30px;
-      cursor: pointer;
-      margin-top: 10px;
-      text-decoration: none;
-    }
-
-    .github-contrib-button:hover {
-      outline: 2px solid white;
-      outline-offset: 3px;
     }
 
     .important {
@@ -138,11 +96,11 @@
     </div>
 
     <div class="section">
-      <div class="post status-banner">
+      <div class="post panel">
         <h2>Work in Progress</h2>
         <p>kinnie is still in active development and contains numerous bugs. The language is not finished yet, and breaking changes may occur.</p>
         <p>I invite contributions! If you encounter issues or have ideas for improvements, please visit the repository:</p>
-        <a href="https://github.com/autoselff/kinnie" class="github-contrib-button">Contribute on GitHub</a>
+        <a href="https://github.com/autoselff/kinnie" class="panel-button">Contribute on GitHub</a>
       </div>
     </div>
 
@@ -154,7 +112,7 @@
             <tr><th>Status</th><td>In Development</td></tr>
             <tr><th>Platforms</th><td>Linux</td></tr>
             <tr><th>Genre</th><td>Programming language, Tool</td></tr>
-            <tr><th>Made in</th><td>C/C++</td></tr>
+            <tr><th>Made with</th><td>C/C++</td></tr>
           </tbody>
         </table>
       </div>
@@ -677,12 +635,7 @@ playerX = playerX + speed * deltaTime</pre>
     <script src="js/posts-data.js"></script>
     <script src="js/posts-render.js"></script>
 
-    <div class="section">
-      <aside class="post" aria-labelledby="ai-note-title">
-        <h2 id="ai-note-title">AI assistance</h2>
-        <p>The concept, design, and development of this project are my own. AI (LLM) tools served only as assistance with selected parts. I disclose AI use in every project where it contributes.</p>
-      </aside>
-    </div>
+    <script src="js/ai-note.js"></script>
 
     <script src="js/footer.js"></script>
   </div>
