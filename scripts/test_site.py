@@ -17,6 +17,7 @@ class PageCheck(HTMLParser):
         self.scripts = []
         self.links = []
         self.in_link = False
+        self.project_cards = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -30,6 +31,8 @@ class PageCheck(HTMLParser):
         if tag == 'a':
             self.in_link = True
             self.links.append(attrs.get('href'))
+            if 'project-card' in attrs.get('class', '').split():
+                self.project_cards.append(attrs.get('href'))
         assert not (tag == 'button' and self.in_link), 'Button nested in a link'
         for attribute in ('src', 'href'):
             value = attrs.get(attribute, '')
@@ -47,6 +50,14 @@ for path in ROOT.glob('*.html'):
     assert check.charset == check.viewport == 1, path.name
     assert check.stylesheets == ['styles.css'], path.name
     assert 'js/social-links.js' in check.scripts, path.name
+    if path.name == 'index.html':
+        assert len(check.project_cards) >= 15
+        assert len(check.project_cards) == len(set(check.project_cards))
+        assert 'anta3.html' in check.project_cards and 'drift-age.html' in check.project_cards
+        html = path.read_text(encoding='utf-8')
+        assert html.count('class="project-list"') == 1
+        assert html.count('<!-- NEW PROJECTS -->') == 1
+        assert 'Main Projects' not in html and 'Side Projects' not in html
     if 'js/footer.js' in check.scripts:
         assert check.scripts.index('js/social-links.js') < check.scripts.index('js/footer.js')
     if path.name in ('kinnie.html', 'owen.html'):
@@ -86,11 +97,11 @@ with TemporaryDirectory() as directory:
     shutil.copytree(ROOT / 'templates', root / 'templates')
     (root / 'res').mkdir()
     (root / 'res/tile.png').write_bytes(b'test asset')
-    (root / 'index.html').write_text('<!-- NEW MAIN PROJECTS -->\n<!-- NEW SIDE PROJECTS -->', encoding='utf-8')
+    (root / 'index.html').write_text('<!-- NEW PROJECTS -->', encoding='utf-8')
     cli = parser()
     args = cli.parse_args([
         'test-game', '--title', 'Game <&>', '--description', '<script>unsafe</script>',
-        '--thumbnail', 'res/tile.png', '--group', 'side', '--ai-note',
+        '--thumbnail', 'res/tile.png', '--featured', '--ai-note',
         '--screenshot', 'res/tile.png', '--youtube-id', 'MYbSW3f48Uw',
         '--link', 'https://example.com/?a=1&b=2',
     ])
@@ -100,9 +111,12 @@ with TemporaryDirectory() as directory:
     assert '&lt;script&gt;unsafe&lt;/script&gt;' in html
     assert 'class="screenshot"' in html and 'js/ai-note.js' in html
     assert 'https://example.com/?a=1&amp;b=2' in html
-    assert 'test-game.html' in (root / 'index.html').read_text()
     before = (root / 'index.html').read_text()
-    for invalid in [args, cli.parse_args(['../escape']), cli.parse_args(['missing', '--group', 'main']),
+    assert 'class="project-card project-featured" href="test-game.html"' in before
+    assert '<h3><span class="project-number" aria-hidden="true"></span>Game &lt;&amp;&gt;</h3>' in before
+    assert '&lt;script&gt;unsafe&lt;/script&gt;' in before
+    assert 'class="project-status">In development' in before
+    for invalid in [args, cli.parse_args(['../escape']), cli.parse_args(['missing', '--featured']),
                     cli.parse_args(['unsafe', '--link', 'javascript:alert(1)']),
                     cli.parse_args(['asset', '--screenshot', '../index.html'])]:
         try:
@@ -118,7 +132,7 @@ with TemporaryDirectory() as directory:
     assert (root / 'index.html').read_text() == before
     (root / 'index.html').write_text('no marker', encoding='utf-8')
     try:
-        create_project(cli.parse_args(['no-marker', '--group', 'main', '--thumbnail', 'res/tile.png']), root)
+        create_project(cli.parse_args(['no-marker', '--thumbnail', 'res/tile.png']), root)
     except ValueError:
         pass
     else:
@@ -127,7 +141,7 @@ with TemporaryDirectory() as directory:
     (root / 'index.html').write_text(before, encoding='utf-8')
     with patch.object(Path, 'replace', side_effect=OSError('Simulated write failure')):
         try:
-            create_project(cli.parse_args(['failed', '--group', 'main', '--thumbnail', 'res/tile.png']), root)
+            create_project(cli.parse_args(['failed', '--thumbnail', 'res/tile.png']), root)
         except OSError:
             pass
         else:

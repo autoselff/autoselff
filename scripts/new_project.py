@@ -1,4 +1,12 @@
-# python3 scripts/new_project.py nowy-projekt --title "Nowy projekt"
+# Create a page: python3 scripts/new_project.py my-project --title "My Project"
+# Fills templates/project.html and creates my-project.html; existing pages are never overwritten.
+# Use --description, --status, --platforms, --genre and --engine for project details.
+# Optional: --screenshot res/path/image.png (repeatable), --youtube-id VIDEO_ID,
+# --link https://example.com --link-text "View project", and --ai-note.
+# Add --thumbnail res/path/banner.png to insert a homepage card; --featured makes it larger.
+# Images must already exist in res/. Keep the NEW PROJECTS marker in index.html.
+# Edit generated HTML for custom content, or templates/project.html and project-card.html for future projects.
+
 import argparse
 from html import escape
 from pathlib import Path
@@ -16,8 +24,8 @@ def create_project(args, root=ROOT):
     page = root / f"{args.slug}.html"
     if page.exists():
         raise FileExistsError(f"Refusing to overwrite {page.name}.")
-    if args.group and not args.thumbnail:
-        raise ValueError("--group requires --thumbnail.")
+    if args.featured and not args.thumbnail:
+        raise ValueError("--featured requires --thumbnail.")
     for asset in [args.thumbnail, *args.screenshot]:
         if asset:
             path = root / asset
@@ -58,15 +66,18 @@ def create_project(args, root=ROOT):
     )
     index = root / 'index.html'
     updated_index = None
-    if args.group:
-        marker = f'<!-- NEW {args.group.upper()} PROJECTS -->'
+    if args.thumbnail:
+        marker = '<!-- NEW PROJECTS -->'
         original = index.read_text(encoding='utf-8')
         if original.count(marker) != 1:
             raise ValueError(f"Expected exactly one {marker} in index.html.")
-        tile = f'''<a href="{page.name}">
-                        <img src="{escape(args.thumbnail)}" alt="{title}" title="{title}" />
-                    </a>
-                    {marker}'''
+        card = Template((root / 'templates/project-card.html').read_text(encoding='utf-8')).substitute(
+            featured=' project-featured' if args.featured else '',
+            page=page.name, thumbnail=escape(args.thumbnail), title=title,
+            status=escape(args.status), genre=escape(args.genre), engine=escape(args.engine),
+            description=escape(args.description),
+        )
+        tile = card.rstrip().replace('\n', '\n                    ') + '\n                    ' + marker
         updated_index = original.replace(marker, tile)
 
     with page.open('x', encoding='utf-8') as output:
@@ -103,7 +114,7 @@ def parser():
     cli.add_argument('--link-text', default='View project')
     cli.add_argument('--ai-note', action='store_true')
     cli.add_argument('--thumbnail')
-    cli.add_argument('--group', choices=['main', 'side'])
+    cli.add_argument('--featured', action='store_true')
     return cli
 
 

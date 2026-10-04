@@ -1,4 +1,4 @@
-const MARQUEE_TEXT = "Wishlist ANTA3 on Steam! What is ANTA3? ANTA3 is a cozy game about building houses for penguins on the island, help the island grow and work off the debt you took to buy a house.";
+const MARQUEE_TEXT = "How long have you been asleep? When was the last time you felt something new, something fresh? Don't be a chameleon. It's high time to Wake up my friend.";
 function loadMarquee(text = MARQUEE_TEXT) {
     const marqueeDiv = document.createElement('div');
     marqueeDiv.className = 'marquee';

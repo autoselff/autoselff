@@ -226,13 +226,52 @@ p { font-weight: 700; line-height: 1.4; }
 }
 .posts-button:hover, .posts-button:focus-visible { text-decoration: none; background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); outline: 1px solid white; outline-offset: 3px; }
 
-/* Only the homepage uses compact project tiles and the skills grid. */
+/* Homepage project archive and skills. */
 .homepage a { color: white; text-decoration: none; }
 .homepage a:hover { text-decoration: underline; }
 .homepage .header a[href] { text-decoration: underline; }
 .homepage .game-section { border-top: 1px solid white; padding: 20px; margin: 0 10px 30px; }
 .homepage .game-section:first-child { border-top: none; }
-.homepage .game-buttons img { width: 120px; border: 1px solid white; }
+.project-intro { margin: -5px 0 24px; color: #bdbdbd; font-size: 14px; }
+.project-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; counter-reset: project; }
+.homepage .project-card {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid white;
+  counter-increment: project;
+}
+.homepage .project-card:hover, .homepage .project-card:focus-visible {
+  text-decoration: none;
+  background: rgba(255,255,255,0.05);
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+.project-card .project-image { display: block; width: 100%; border: 1px solid rgba(255,255,255,0.3); box-sizing: border-box; }
+.project-info { min-width: 0; }
+.project-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.project-heading h3 { margin: 0; font-size: 18px; font-weight: 900; overflow-wrap: anywhere; }
+.project-number::before { content: counter(project, decimal-leading-zero) ' / '; font-size: 12px; font-weight: 700; color: #bdbdbd; }
+.project-status { display: inline-block; border: 1px solid rgba(255,255,255,0.4); padding: 4px 6px; font-size: 11px; font-weight: 700; }
+.project-meta { margin-top: 12px; color: #bdbdbd; font-size: 12px; font-weight: 700; line-height: 1.5; }
+.project-info p { margin: 10px 0 16px; font-size: 14px; line-height: 1.5; }
+.project-action { display: inline-block; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+.project-card:hover .project-action, .project-card:focus-visible .project-action { text-decoration: underline; text-underline-offset: 4px; }
+.homepage .project-featured { grid-column: 1 / -1; border-width: 2px; grid-template-columns: 160px minmax(0, 1fr); gap: 24px; padding: 20px; align-items: center; }
+.project-featured .project-heading h3 { font-size: 22px; }
+.project-featured .project-info p { font-size: 15px; }
+.project-featured .project-status { background: white; border-color: white; color: black; }
+@media (max-width: 650px) {
+  .project-list { grid-template-columns: minmax(0, 1fr); }
+  .homepage .project-card, .homepage .project-featured { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; padding: 16px; }
+  .project-heading h3 { font-size: 20px; }
+}
+@media (max-width: 360px) {
+  .homepage .project-card, .homepage .project-featured { grid-template-columns: minmax(0, 1fr); }
+  .project-card .project-image { width: 100px; }
+}
 .homepage img { max-width: 100%; height: auto; }
 .homepage center img { margin: 4px; }
 .homepage .iframe-container { max-width: 646px; padding-bottom: 29.41%; }
