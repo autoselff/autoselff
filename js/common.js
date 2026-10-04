@@ -117,12 +117,13 @@ function loadCommon() {
       display: inline-block;
       border: 1px solid white;
       padding: 5px 10px;
+      background: black;
       text-decoration: none;
     }
 
     .nav a.home-link:hover {
       color: white;
-      background: transparent;
+      background: black;
       outline: 1px solid white;
       outline-offset: 3px;
     }
@@ -238,16 +239,33 @@ function loadCommon() {
       cursor: zoom-out;
     }
 
+    .screenshot-viewer button:not([hidden]) {
+      display: grid;
+    }
+
     .screenshot-viewer button {
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      padding: 0;
       position: fixed;
       top: 12px;
       right: 16px;
       border: 1px solid white;
       background: black;
       color: white;
-      font: inherit;
-      font-size: 24px;
+      font: 24px/1 Arial, sans-serif;
       cursor: pointer;
+    }
+
+    .screenshot-viewer .screenshot-arrow {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .screenshot-viewer .screenshot-prev {
+      left: 16px;
+      right: auto;
     }
 
     .download-button {
@@ -430,6 +448,21 @@ function loadCommon() {
 
 loadCommon();
 
+let screenshotIndex = 0;
+
+function showScreenshot(index) {
+  const screenshots = [...document.querySelectorAll('.screenshot')];
+  const viewer = document.querySelector('.screenshot-viewer');
+  screenshotIndex = (index + screenshots.length) % screenshots.length;
+  const screenshot = screenshots[screenshotIndex];
+  const image = viewer.querySelector('img');
+  image.src = screenshot.src;
+  image.alt = screenshot.alt;
+  viewer.querySelectorAll('.screenshot-arrow').forEach((button) => {
+    button.hidden = screenshots.length < 2;
+  });
+}
+
 document.addEventListener('click', (event) => {
   const screenshot = event.target.closest('.screenshot');
   if (!screenshot) return;
@@ -438,13 +471,21 @@ document.addEventListener('click', (event) => {
   if (!viewer) {
     viewer = document.createElement('dialog');
     viewer.className = 'screenshot-viewer';
-    viewer.innerHTML = '<button type="button" aria-label="Close screenshot">×</button><img alt="">';
-    viewer.addEventListener('click', () => viewer.close());
+    viewer.setAttribute('aria-label', 'Screenshots');
+    viewer.innerHTML = '<button type="button" aria-label="Close screenshot">×</button><button type="button" class="screenshot-arrow screenshot-prev" data-step="-1" aria-label="Previous screenshot">&lt;-</button><img alt=""><button type="button" class="screenshot-arrow" data-step="1" aria-label="Next screenshot">-&gt;</button>';
+    viewer.addEventListener('click', (event) => {
+      const arrow = event.target.closest('[data-step]');
+      if (arrow) showScreenshot(screenshotIndex + Number(arrow.dataset.step));
+      else viewer.close();
+    });
+    viewer.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      showScreenshot(screenshotIndex + (event.key === 'ArrowLeft' ? -1 : 1));
+    });
     document.body.appendChild(viewer);
   }
 
-  const image = viewer.querySelector('img');
-  image.src = screenshot.src;
-  image.alt = screenshot.alt;
+  showScreenshot([...document.querySelectorAll('.screenshot')].indexOf(screenshot));
   viewer.showModal();
 });
