@@ -1,4 +1,4 @@
-const MARQUEE_TEXT = "How long have you been asleep? When was the last time you felt something new, something fresh? Don't be a chameleon. It's high time to Wake up my friend.";
+const MARQUEE_TEXT = "How long have you been asleep? Don't be a chameleon. It's high time to Wake up my friend.";
 function loadMarquee(text = MARQUEE_TEXT) {
     const marqueeDiv = document.createElement('div');
     marqueeDiv.className = 'marquee';
