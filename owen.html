@@ -6,42 +6,28 @@
   <script src="js/common.js"></script>
   <script src="js/marquee.js"></script>
   <style>
-    .status-banner {
-      background-color: rgba(100, 150, 255, 0.15);
-      border: 2px solid rgba(100, 150, 255, 0.5);
-      border-radius: 4px;
-      padding: 20px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .status-banner h3 {
-      margin-top: 0;
-      color: #88bbff;
-    }
-
-    .status-banner p {
-      margin: 10px 0;
-      line-height: 1.6;
+    .status-banner,
+    .status-banner:hover {
+      border: 2px solid white;
+      outline-color: white;
+      outline-width: 2px;
     }
 
     .owen-button {
       display: inline-block;
-      background-color: #88bbff;
-      color: black;
+      background-color: black;
+      color: white;
       font-family: 'Doto', monospace;
       font-weight: bold;
-      border: none;
+      border: 2px solid white;
       padding: 12px 30px;
       cursor: pointer;
       margin: 10px 6px 0;
-      border-radius: 4px;
       text-decoration: none;
     }
 
     .owen-button:hover {
-      background-color: #aaccff;
-      outline: 1px dotted white;
+      outline: 2px solid white;
       outline-offset: 3px;
     }
   </style>
@@ -65,8 +51,8 @@
     </div>
 
     <div class="section">
-      <div class="status-banner">
-        <h3>Download</h3>
+      <div class="post status-banner">
+        <h2>Download</h2>
         <p>Android APK, direct from GitHub Releases. Bring your own API keys.</p>
         <a href="https://github.com/autoselff/owen_app/releases/download/1.0.0/app-release.apk" class="owen-button">Download APK</a>
         <a href="https://github.com/autoselff/owen_app" class="owen-button">View on GitHub</a>
@@ -127,6 +113,14 @@
 
     <script src="js/posts-data.js"></script>
     <script src="js/posts-render.js"></script>
+
+    <div class="section">
+      <aside class="post" aria-labelledby="ai-note-title">
+        <h2 id="ai-note-title">AI assistance</h2>
+        <p>The concept, design, and development of this project are my own. AI (LLM) tools served only as assistance with selected parts. I disclose AI use in every project where it contributes.</p>
+      </aside>
+    </div>
+
     <script src="js/footer.js"></script>
   </div>
 </body>

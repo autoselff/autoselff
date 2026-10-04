@@ -105,6 +105,24 @@ function loadCommonIndex() {
       text-align: center;
     }
 
+    .header a[href],
+    .footer a[href] {
+      display: inline-block;
+      padding: 8px 2px;
+      font-size: 18px;
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .header a[href]:hover,
+    .header a[href]:focus-visible,
+    .footer a[href]:hover,
+    .footer a[href]:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 3px;
+    }
+
     .footer {
       margin-top: auto;
       border-top: 1px solid white;

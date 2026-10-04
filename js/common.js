@@ -109,6 +109,21 @@ function loadCommon() {
       text-decoration: underline;
     }
 
+    .footer a[href] {
+      display: inline-block;
+      padding: 8px 2px;
+      font-size: 18px;
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer a[href]:hover,
+    .footer a[href]:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 3px;
+    }
+
     .nav a.home-link {
       position: fixed;
       top: 42px;
